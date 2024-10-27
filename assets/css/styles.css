@@ -1,0 +1,154 @@
+/* General Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Kufi Arabic ExtraBold';
+    color: #2D435B;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Color Variables */
+:root {
+    --primary-color: #2D435B; /* Main color for brand */
+    --secondary-color: #638181; /* Accent color */
+    --dark-color: #333333;
+    --light-color: #f5f5f5;
+    --dot-color: #FF9F7C;
+}
+
+/* Navbar - Transparent and Scrolled */
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.navbar.scrolled {
+    background-color: var(--primary-color); /* Add your desired background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: var(--dark-color);
+}
+
+.navbar.scrolled .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--dot-color);
+}
+
+/* Footer */
+footer {
+    background-color: #2D435B;
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+footer h5 {
+    color: #BFCDCD;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--dot-color);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .text-center p {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    color: #ffff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004499;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffff;
+}
+
+/* AOS Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(20px);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
