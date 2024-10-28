@@ -12,6 +12,81 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
+<style>
+
+  /* Custom animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.investor-section {
+    padding: 5rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2D435B;
+
+    
+}
+
+/* Add animation classes */
+.animated {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+.slide-in-left {
+    animation-name: slideInLeft;
+}
+
+.slide-in-right {
+    animation-name: slideInRight;
+}
+
+.zoom-in {
+    animation-name: zoomIn;
+}
+   
+.investor-section h2{
+
+  font-weight: bold;
+}
+
+.investor-section {
+    padding: 5rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    
+}
+
+</style>
 </head>
 <body>
     <!-- Navbar Start -->
@@ -45,6 +120,94 @@
                 <h1 class="page-title">Investors</h1>
             </div>
         </section>
+
+        <section class="investor-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-6" data-aos="fade-left" >
+                        <h2 ><span class="icon bi-circle-fill" style="color: #FF9F7C; padding-right: 10px; font-size: 2rem;"></span> Why Invest in Levenbert?</h2>
+                        <p>Investing in LEVENBERT means choosing a partner dedicated to success and forging a partnership rooted in shared goals and mutual growth. Together, we can navigate complexities, unlock new opportunities, and drive sustainable growth and profitability, ensuring that your investment becomes a pivotal element of our collective success story. Get in touch with us to explore investment opportunities.</p>
+                    </div>
+                    <div class="col-md-6" data-aos="slide-right">
+                        <img src="assets/img/Sector01.png" class="img-fluid" alt="Digital Transformation">
+                    </div>
+          
+                </div>
+            </div>
+          </section>
+
+
+ <!-- Section 2 -->
+  
+ <section class="investor-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="slide-left">
+                <img src="assets/img/Sector02.png" class="img-fluid" alt="Invest in Innovation">
+            </div>
+            <div class="col-md-6" data-aos="fade-right"  >
+              <h2 ><span class="icon bi-circle-fill" style="color: #FF9F7C; padding-right: 10px; font-size: 2rem;"></span>Our Commitment to Investors</h2>
+                <p>-	We are committed to partnering with visionary investors who share our dedication to harnessing turnkey solutions to create a significant impact and enhanced returns on investment.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="investor-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-md-6" data-aos="fade-right" >
+              <h2 ><span class="icon bi-circle-fill" style="color: #FF9F7C; padding-right: 10px; font-size: 2rem;"></span> Join our Success</h2>
+                <p>-	Investing in a journey marked by proven achievements and transformative impact means aligning with our track record of success stories that highlight our ability to drive meaningful change and influence. While envisioning the future, we are committed to creating even more success stories. Become an integral part of a legacy that continues to evolve and inspire.</p>
+            </div>
+  <div class="col-md-6" data-aos="slide-left">
+                <img src="assets/img/Sector03.png" class="img-fluid" alt="Innovation and Technology">
+            </div>
+  
+        </div>
+    </div>
+  </section>
+
+  <!-- Section 4 (New) -->
+  <section class="investor-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            
+  <div class="col-md-6" data-aos="slide-right">
+                <img src="assets/img/Sector05.png" class="img-fluid" alt="Sustainable Solutions">
+            </div>
+  
+            <div class="col-md-6" data-aos="fade-left" >
+              <h2 ><span class="icon bi-circle-fill" style="color: #FF9F7C; padding-right: 10px; font-size: 2rem;"></span>Our Sustainable Approach</h2>
+                <p>VIOUS is committed to sustainability in every aspect of our operations. We believe that technology can be a driving force for positive environmental change. Join us as we pave the way for a greener future through innovative digital solutions.</p>
+            </div>
+           
+  
+        </div>
+    </div>
+  </section>
+
+
+   <!-- Section 5 (New) -->
+   <section class="investor-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-md-6" data-aos="fade-right" >
+              <h2 ><span class="icon bi-circle-fill" style="color: #FF9F7C; padding-right: 10px; font-size: 2rem;"></span>Building Strategic Partnerships</h2>
+                <p>At VIOUS, we believe that collaboration is key to success. We are eager to partner with forward-thinking investors who share our vision of leveraging digital technologies for maximum impact and return on investment.</p>
+            </div>
+  <div class="col-md-6" data-aos="slide-left">
+                <img src="assets/img/Sector06.png" class="img-fluid" alt="Innovative Partnerships">
+            </div>
+  
+        </div>
+    </div>
+  </section>
+
     </main>
     <!-- Main Content End -->
 
@@ -101,8 +264,12 @@
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
-    </script>
+        AOS.init({
+            duration: 800, // Duration of animations in milliseconds
+            easing: 'ease-in-out', // Easing function for the animations
+            once: true, // Whether animation should happen only once
+        });
+      </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
