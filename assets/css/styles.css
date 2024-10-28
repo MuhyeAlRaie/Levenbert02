@@ -55,7 +55,7 @@ section {
 }
 
 .navbar .nav-link {
-    color: var(--dark-color);
+    color: #fff;
 }
 
 .navbar.scrolled .nav-link {
