@@ -214,13 +214,13 @@ footer .text-center p {
 /* About section */
 
 .about-us-section {
-    background: url('assets/img/overviewBG.jpg') center/cover no-repeat;
+    background: url('') center/cover no-repeat;
     padding: 20px; /* Adjust padding for mobile */
 }
 
 .about-us-title {
     font-size: 2.5rem; /* Default size */
-    text-align: center; /* Center align */
+    text-align: left; /* Center align */
     margin-bottom: 1.5rem;
 }
 

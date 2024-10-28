@@ -12,6 +12,132 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
+    <style>
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
+
+    .strategic-direction h2 {
+    font-size: 2.5rem; /* Adjust as needed */
+    color: #2D435B; /* Example color */
+}
+
+.strategic-direction h3 {
+    font-size: 1.8rem; /* Adjust as needed */
+    color: #2D435B; /* Example color */
+}
+
+.strategic-direction p {
+    font-size: 1rem; /* Adjust as needed */
+    line-height: 1.6; /* Adjust for readability */
+    text-align: justify;
+}
+
+
+.core-values h2 {
+    font-size: 2.5rem; /* Adjust as needed */
+    color: #2D435B; /* Example color */
+}
+
+.core-values h4 {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: #2D435B; /* Example color */
+}
+
+.core-values p {
+    font-size: 1rem; /* Adjust as needed */
+    line-height: 1.6; /* Adjust for readability */
+    text-align: justify;
+}
+
+.core-values .icon {
+    margin-bottom: 15px; /* Spacing between icon and title */
+}
+
+
+.strategic-approach h2 {
+    font-size: 2.5rem; /* Adjust as needed */
+    color: #638181; /* Example color */
+}
+
+.strategic-approach h4 {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: #FF9F7C; /* Example color */
+}
+
+.strategic-approach p {
+    font-size: 1rem; /* Adjust as needed */
+    line-height: 1.6; /* Adjust for readability */
+    text-align: justify;
+}
+
+
+
+.strategic-priorities h2 {
+    font-size: 2.5rem; /* Adjust to your preference */
+    color: #638181; /* Example color */
+}
+
+.strategic-priorities h4 {
+    font-size: 1.3rem;
+    color: #FF9F7C; /* Example color */
+}
+
+.strategic-priorities p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Example color */
+}
+
+
+.expert-team {
+    padding: 2rem 0;
+}
+
+.expert-team h2 {
+    font-size: 2rem;
+    color: #2D435B; /* Title color */
+}
+
+.expert-team p {
+    font-size: 1rem;
+    color: #555; /* Paragraph color */
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Optional styles for responsiveness */
+@media (max-width: 768px) {
+    .expert-team h2 {
+        font-size: 1.5rem;
+    }
+    
+    .expert-team p {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
 </head>
 <body>
     <!-- Navbar Start -->
@@ -46,32 +172,265 @@
             </div>
         </section>
 
-        <section class="about-us-section" style="background-image: url('');">
-            <div class="about-us-overlay d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4" data-aos="fade-right">
-                            <h2 class="about-us-title" style="color: #2D435B;">LEVENBERT<span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
-                            <div class=" about-us-content">
-                                <p class="about-us-paragraph">
-                                    LEVENBERT is a distinguished global network of professional consulting services firms, that delivers top-tier consulting services across various domains, including Consulting and Advisory, Learning and Development, Innovation and Ideation, and Technology Professional Consulting Solutions. Our aim is to support clients in making their businesses more agile, relevant, and growth-oriented. Leveraging our integrated expertise, we collaborate closely with local, regional, and global clients to accelerate value creation, mitigate risks, and provide consultancy that drives optimal results. Our mission is to offer scalable turnkey implementation solutions, underpinned by qualified expertise, well-proven methodologies, creativity, and innovation. We ensure our solutions are always aligned with local cultures and the aspirations of our clients toward excellence.
-
-                                </p>
-                               
-                            </div>
+        <section class="overlay-dots">
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Left Column: Title and Paragraph -->
+                <div class="col-md-6 content-wrapper" style="background-color: #ffff;">
+                  <h2 class="fw-bold" style="color: #2D435B; font-size: 40px;">LEVENBERT <span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
+                  <p class="lead" style="text-align: justify; font-size: 1rem;">LEVENBERT is a global consulting network that provides top-tier services in Consulting, Learning, Innovation, and Technology Solutions. We enhance client agility and growth through scalable, turnkey solutions tailored to local cultures, driving value creation and optimal results.
+                </p>
+                </div>
+                <!-- Right Column: GIF Image -->
+                <div class="col-md-6 text-center content-wrapper"  >
+                 
+                 <div class="col-md-2 d-flex" style="margin-left: auto;">
+                    <img  src="assets/img/aboutusSC.png" alt="GIF Image" class="img-fluid">
+                  </div>
+                  <img src="assets/img/Sector01.png" alt="GIF Image" class="img-fluid">
+        
+                  </div>
+                   
+                    
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <!-- Message Board Directory Section -->
+        <section class="message-board overlay-dots" >
+            <div class="container text-left" >
+        
+                <div class=" content-wrapper" style="background-color: #ffff;">
+                      <h2 style="color: #2D435B;"><span style="color: lightgray;">Message</span><br>Board of Directors<span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
+                <p style="color: #2D435B; text-align: justify;">
+                   <strong><span style="color: #638181;">Dear Valued Stakeholders,</span></strong>  <br><br>
+                    Since our establishment in 2004 as a boutique consultancy in Dubai, LEVENBERT has expanded across the region. We sincerely appreciate your continued trust and support.<br><br>
+                    In this era of change and innovation, our commitment to delivering transformative solutions remains steadfast. Our focus on strategic foresight, cultural adaptability, operational efficiency, and digital innovation empowers us to foster sustainable growth and resilience in an evolving marketplace.<br><br>
+                    Our dedicated team offers comprehensive solutions, including strategic planning and excellence program implementation, aimed at enhancing organizational performance. By leveraging innovative strategies and cutting-edge technologies, we enable our clients to navigate challenges with confidence.<br><br>
+                    As we look to the future, we are committed to optimizing operational processes and ensuring financial resilience. Thank you for your unwavering dedication and collaboration. Together, we will continue to embrace opportunities and achieve remarkable milestones.
+                </p>
+                <p><strong style="color: #638181 ;">Sincerely,<br>The Board of Directors</strong></p>  
+                </div>
+            
+            </div>
+        </section>
+        
+        <!-- Strategic Direction Section -->
+        <section class="strategic-direction overlay-dots my-5">
+            <div class="container">
+                <h2 class="text-center mb-4"><span style="color: lightgray;">LEVENBERT</span> Strategic Direction</h2>
+                <div class="row content-wrapper" style="background-color: #ffff;">
+                     <div class="col-lg-6 mb-4">
+                        
+                        <h3><i class="bi bi-circle-fill" style="color: #FF9F7C;"></i> Vision</h3>
+                        <p>
+                            Empowering Businesses To Achieve Excellence And Sustainable Growth.
+        
+                        </p>
+                    </div>
+        
+                    <div class="col-lg-6 mb-4">
+                       
+                        <h3><i class="bi bi-circle-fill" style="color: #FF9F7C;"></i> Mission</h3>
+                        <p>
+                            Deliver transformative and impactful consulting services by building on the trust of our customers. Leveraging our expertise, proven methodologies, and culturally aligned approach, we are committed to driving excellence.
+        
+                        </p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Core Values Section -->
+        <section class="core-values overlay-dots my-5">
+            <div class="container">
+                <h2 class="text-center mb-4" style="color: #638181;">Core Values</h2>
+                <div class="row">
+                    <div class="col-lg-4 text-center content-wrapper mb-4" style="background-color: #ffff;">
+                        <div class="icon" style="font-size: 2rem; color: #FF9F7C;">
+                            <i class="bi bi-circle-fill"></i> <!-- Bootstrap Icon -->
                         </div>
-                        <div class="col-lg-4" style="padding-top: 51px;" data-aos="fade-left">
-                            <div class=" about-us-content">
-                                <h2 class="about-us-title">.</h2>
-                                <p class="about-us-paragraph" >
-                                    At LEVENBERT, our passion for pioneering various industries and market endeavors is evident in our proactive, futuristic, and revolutionary approach. We pride ourselves on being an up-to-date specialized consulting firm that develops and executes integrated solutions, yielding outstanding results in clients' revenue growth, market share, and business outreach. Our dedication to providing first-class services means we continually push the boundaries of innovation to offer bespoke solutions that not only meet but exceed our clients' expectations. This commitment to excellence positions LEVENBERT as a leader in the consulting industry, ensuring that our clients achieve significant and sustainable success in their respective markets.. 
-                                </p>
-                            </div>
+                        <h4 class="mt-3" style="color: #FF9F7C;">PARTNERSHIP<br>
+                          <span style="color: #BFCDCD;">Customer Focused
+                        </span>
+                        </h4>
+                        <p>
+                            Working with our clients and working towards common goals, commitment to unique requirements of every engagement .
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center content-wrapper mb-4" style="background-color: #ffff;">
+                        <div class="icon" style="font-size: 2rem; color: #FF9F7C;">
+                            <i class="bi bi-circle-fill"></i> <!-- Bootstrap Icon -->
                         </div>
+                        <h4 class="mt-3" style="color: #FF9F7C;">ACHIEVEMENT<br>
+                            <span style="color: #BFCDCD;">Always Unique
+                          </span></h4>
+                        <p>
+                            as we always think outside the box to excel in our work, And all tasks within the agreed timeline, by exceeding clients’ expectations .
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center content-wrapper mb-4" style="background-color: #ffff;">
+                        <div class="icon" style="font-size: 2rem; color: #FF9F7C;">
+                            <i class="bi bi-circle-fill"></i> <!-- Bootstrap Icon -->
+                        </div>
+                        <h4 class="mt-3" style="color: #FF9F7C;">AGILITY<br>
+                        <span style="color: #BFCDCD;">Function First
+                      </span></h4>
+                        <p>
+                            with quality in all deliverables is a cornerstone in our philosophy.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+        
+        
+        <!-- Strategic Approach Section -->
+        <section class="strategic-approach overlay-dots  my-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Strategic Approach</h2>
+                <div class="row content-wrapper align-items-center" style="background-color: #ffff;">
+                    <div class="col-lg-6" >
+                        <div class="row">
+                            <div class="col-md-6 mb-4" style="background-color: #ffff;">
+                                <h4>CLIENT-CENTRICITY</h4>
+                                <p>
+                                    Placing clients at the center of all services, understanding their unique needs, and providing customized solutions.
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-4" style="background-color: #ffff;">
+                                <h4>COLLABORATION AND PARTNERSHIP
+                                </h4>
+                                <p>
+                                    Building strong partnerships with clients and stakeholders to drive collective success.
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-4" style="background-color: #ffff;">
+                                <h4>INNOVATION AND CREATIVITY 
+                                </h4>
+                                <p>
+                                    Continuously innovating and employing creative methodologies to address complex challenges.
+        
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-4" style="background-color: #ffff;">
+                                <h4>GLOBAL EXPERTISE WITH LOCAL ADAPTATION
+                                </h4>
+                                <p>
+                                    Leveraging global expertise while adapting solutions to fit local cultural contexts and market conditions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 text-center" style="background-color: #ffff;">
+        
+                        <div class="col-md-2 d-flex" style="margin-left: auto;">
+                        <img  src="assets/img/aboutusSC.png" alt="GIF Image" class="img-fluid">
+                      </div>
+                        <img src="assets/img/StrategyApproach.png" alt="Strategic Approach" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Strategic Priorities Section -->
+        <section class="strategic-priorities overlay-dots my-5">
+            <div class="container content-wrapper" style="background-color: #ffff;">
+                <h2 class="text-center mb-4">Strategic Priorities</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>CLIENT-CENTRIC<br> EXCELLENCE
+                        </h4>
+                        <p>
+                            Deliver unparalleled consulting services tailored to client needs, fostering long-term partnerships.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>GLOBAL OUTREACH AND<br> EXPANSION
+                        </h4>
+                        <p>
+                            Expand the company's global footprint by entering new markets and strengthening existing ones.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>SUSTAINABLE<br> DEVELOPMENT
+                        </h4>
+                        <p>
+                            Promote sustainable business practices and solutions for clients and within the organization.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>STRATEGIC <br>PARTNERSHIPS
+                        </h4>
+                        <p>
+                            Forge alliances and partnerships to broaden service offerings and expand market reach.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>INNOVATION AND<br> INTEGRATION
+                        </h4>
+                        <p>
+                            Continuously integrating cutting-edge technologies and innovative methodologies in consulting practices to offer advanced solutions.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>OPERATIONAL<br> EFFICIENCY
+                        </h4>
+                        <p>
+                            Streamline internal processes and enhance resource utilization for optimal performance.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>TALENT ACQUISITION <br>AND DEVELOPMENT
+                        </h4>
+                        <p>
+                            Invest in employee growth and development to maintain a highly skilled and motivated workforce.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4>AGILITY AND<br> ADAPTABILITY
+                        </h4>
+                        <p>
+                            Developing a flexible and responsive organizational structure to quickly adapt to market changes and emerging trends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Levenbert Expert Team Section -->
+        <section class="expert-team my-5">
+          <div class="container">
+              <div class="row">
+                  <!-- Left Column -->
+                  <div class="col-md-6">
+                      <h2 class="mb-4">Levenbert Expert Team</h2>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <p>LEVENBERT’s management team and workforce exemplifies robust leadership and collaborates closely with consulting teams to guarantee the highest quality of service and support. The team is composed of seasoned professionals who have dedicated two to three decades to the management and consulting industry, bringing a wealth of experience and expertise. LEVENBERT places significant emphasis on the meticulous selection and composition of its team, ensuring that all experts and consultants possess substantial first-hand experience in their respective and specialized fields. 
+                              </p>
+                          </div>
+                          <div class="col-md-6">
+                              <p>This commitment to practical knowledge means our team members are practitioners rather than mere theoreticians, which is crucial for providing actionable and effective solutions to clients. Moreover, the majority of our team members hold advanced postgraduate degrees and various professional certification credentials, underscoring their deep knowledge and unwavering dedication to excellence in their disciplines. This combination of extensive experience, practical expertise, and advanced education positions LEVENBERT as a leader in delivering unparalleled consulting services tailored to meet the specific needs of our clients.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Right Column -->
+                  <div class="col-md-6 d-flex align-items-center justify-content-center">
+                      <h2 class="text-center"><span style="font-size: 20px; font-weight: bold;">GREAT FOCUS ON</span> <br><span style="font-size: 50px; font-weight: bolder;color: #BFCDCD;">SELECTION</span> <br><span style="color: #2D435B;font-size: 16px;">AND</span>     <span style="font-size: 50px; font-weight: bolder;color: #BFCDCD;">HARMONY</span><br> OF THE TEAM <span style="color: #FF9F7C;font-size: 5rem;">.</span>
+                      </h2>
+                  </div>
+              </div>
+          </div>
+        </section>
+        
     </main>
     <!-- Main Content End -->
 
