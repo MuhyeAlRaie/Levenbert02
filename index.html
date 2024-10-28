@@ -49,12 +49,69 @@
                         <div class="col-md-6" data-aos="fade-right">
                             <h1 class="hero-title">Empowering Your Business with Expertise</h1>
                             <p class="hero-text">Levenbert Consulting provides industry-leading insights to help you achieve success.</p>
-                            <a href="about.html" class="btn btn-primary mt-3">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="about-us-section" style="background-image: url('');">
+            <div class="about-us-overlay d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4" data-aos="fade-right">
+                            <h2 class="about-us-title" style="color: #2D435B;">LEVENBERT<span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
+                            <div class=" about-us-content">
+                                <p class="about-us-paragraph">
+                                    LEVENBERT is a distinguished global network of professional consulting services firms, that delivers top-tier consulting services across various domains, including Consulting and Advisory, Learning and Development, Innovation and Ideation, and Technology Professional Consulting Solutions. Our aim is to support clients in making their businesses more agile, relevant, and growth-oriented. Leveraging our integrated expertise, we collaborate closely with local, regional, and global clients to accelerate value creation, mitigate risks, and provide consultancy that drives optimal results. Our mission is to offer scalable turnkey implementation solutions, underpinned by qualified expertise, well-proven methodologies, creativity, and innovation. We ensure our solutions are always aligned with local cultures and the aspirations of our clients toward excellence.
+
+                                </p>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style="padding-top: 51px;" data-aos="fade-left">
+                            <div class=" about-us-content">
+                                <h2 class="about-us-title">.</h2>
+                                <p class="about-us-paragraph" >
+                                    At LEVENBERT, our passion for pioneering various industries and market endeavors is evident in our proactive, futuristic, and revolutionary approach. We pride ourselves on being an up-to-date specialized consulting firm that develops and executes integrated solutions, yielding outstanding results in clients' revenue growth, market share, and business outreach. Our dedication to providing first-class services means we continually push the boundaries of innovation to offer bespoke solutions that not only meet but exceed our clients' expectations. This commitment to excellence positions LEVENBERT as a leader in the consulting industry, ensuring that our clients achieve significant and sustainable success in their respective markets.. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fact-counter-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center" data-aos="fade-right">
+                        <h2 class="fact-title">Our Achievements</h2>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end" data-aos="fade-left">
+                        <div class="row fact-grid">
+                            <div class="col-6 fact-item text-center">
+                                <div class="fact-number" data-target="150">0</div>
+                                <p>Clients Served</p>
+                            </div>
+                            <div class="col-6 fact-item text-right">
+                                <div class="fact-number" data-target="200">0</div>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="col-6 fact-item text-right">
+                                <div class="fact-number" data-target="20">0</div>
+                                <p>Years of Experiance</p>
+                            </div>
+                            <div class="col-6 fact-item text-right">
+                                <div class="fact-number" data-target="300">0</div>
+                                <p>Partnerships Established</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
     <!-- Main Content End -->
 
@@ -114,5 +171,30 @@
         AOS.init();
     </script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll('.fact-number');
+        
+            const updateCount = (element, target) => {
+                let count = 0;
+                const increment = Math.ceil(target / 100); // Change the speed of increment
+        
+                const interval = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(interval);
+                    }
+                    element.textContent = count;
+                }, 20);
+            };
+        
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                updateCount(counter, target);
+            });
+        });
+        </script>
 </body>
 </html>

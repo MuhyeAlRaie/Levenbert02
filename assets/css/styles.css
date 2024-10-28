@@ -7,6 +7,7 @@
     padding: 0;
 }
 
+
 body {
     font-family: 'Noto Kufi Arabic ExtraBold';
     color: #f5f5f5;
@@ -160,6 +161,88 @@ footer .text-center p {
     }
 }
 
+/* About Us Section */
+.about-us-section {
+    position: relative;
+    height: 100vh; /* Full height */
+    background: url('') center/cover no-repeat;
+}
+
+.about-us-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(246, 246, 246, 0.772); /* Dark overlay */
+    color: #000;
+}
+
+/* About section */
+
+.about-us-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.about-us-paragraph {
+    text-align: justify; /* Justified text */
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-us-title {
+        font-size: 2rem;
+    }
+    .about-us-paragraph {
+        font-size: 1rem;
+    }
+}
+
+/* Fact Counter Section */
+.fact-counter-section {
+    background-color: #ffff; /* Light background color */
+    padding: 60px 0; /* Padding for the section */
+}
+
+.fact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #638181;
+}
+
+.fact-grid {
+    display: flex; /* Use flexbox for grid layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.fact-item {
+    text-align: center; /* Align text to the right */
+    margin-bottom: 30px; /* Spacing between items */
+    color: #BFCDCD;
+   border-bottom: 2px solid #2D435B;
+   border-bottom-left-radius: 50px ;
+   box-shadow: #2D435B;
+   border-bottom-right-radius: 50px ;
+}
+
+.fact-number {
+    font-size: 3rem; /* Large font for numbers */
+    font-weight: 700;
+    color: #FF9F7C; /* Primary color for numbers */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fact-title {
+        font-size: 2rem;
+    }
+    .fact-number {
+        font-size: 2.5rem;
+    }
+}
 
 /* Buttons */
 .btn-primary {
