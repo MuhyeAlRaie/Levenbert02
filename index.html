@@ -55,11 +55,11 @@
             </div>
         </section>
 
-        <section class="about-us-section" style="background-image: url('');">
+        <section class="about-us-section" style="background-image: url('assets/img/overviewBG.jpg');">
             <div class="about-us-overlay d-flex align-items-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4" data-aos="fade-right">
+                        <div class="col-md-6" data-aos="fade-right">
                             <h2 class="about-us-title" style="color: #2D435B;">LEVENBERT<span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
                             <div class=" about-us-content">
                                 <p class="about-us-paragraph">
@@ -69,9 +69,9 @@
                                
                             </div>
                         </div>
-                        <div class="col-lg-4" style="padding-top: 51px;" data-aos="fade-left">
+                        <div class="col-md-6" style="padding-top: 51px;" data-aos="fade-left">
                             <div class=" about-us-content">
-                                <h2 class="about-us-title">.</h2>
+                                <!-- <h2 class="about-us-title">.</h2> -->
                                 <p class="about-us-paragraph" >
                                     At LEVENBERT, our passion for pioneering various industries and market endeavors is evident in our proactive, futuristic, and revolutionary approach. We pride ourselves on being an up-to-date specialized consulting firm that develops and executes integrated solutions, yielding outstanding results in clients' revenue growth, market share, and business outreach. Our dedication to providing first-class services means we continually push the boundaries of innovation to offer bespoke solutions that not only meet but exceed our clients' expectations. This commitment to excellence positions LEVENBERT as a leader in the consulting industry, ensuring that our clients achieve significant and sustainable success in their respective markets.. 
                                 </p>
@@ -168,33 +168,63 @@
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
+       AOS.init({
+  duration: 1000, // Animation duration in milliseconds
+  easing: 'ease-in-out',
+  once: true, // Animation happens only once when scrolling
+});
     </script>
     <script src="assets/js/main.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const counters = document.querySelectorAll('.fact-number');
-        
-            const updateCount = (element, target) => {
-                let count = 0;
-                const increment = Math.ceil(target / 100); // Change the speed of increment
-        
-                const interval = setInterval(() => {
-                    count += increment;
-                    if (count >= target) {
-                        count = target;
-                        clearInterval(interval);
-                    }
-                    element.textContent = count;
-                }, 20);
-            };
-        
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                updateCount(counter, target);
-            });
+     document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.fact-number');
+    let hasCounted = false; // To ensure counting happens only once
+
+    const updateCount = (element, target) => {
+        let count = 0;
+        const increment = Math.ceil(target / 100); // Change the speed of increment
+
+        const interval = setInterval(() => {
+            count += increment;
+            if (count >= target) {
+                count = target;
+                clearInterval(interval);
+            }
+            element.textContent = count;
+        }, 20);
+    };
+
+    const startCounting = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            updateCount(counter, target);
         });
+    };
+
+    // Set up Intersection Observer
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when at least 10% of the section is visible
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasCounted) {
+                startCounting();
+                hasCounted = true; // Prevent counting again
+                observer.unobserve(entry.target); // Stop observing the section after counting
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe the fact counter section
+    const factCounterSection = document.querySelector('.fact-counter-section');
+    observer.observe(factCounterSection);
+});
         </script>
 </body>
 </html>
