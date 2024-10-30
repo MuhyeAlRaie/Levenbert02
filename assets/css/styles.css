@@ -284,35 +284,70 @@ footer .text-center p {
 
 /* Fact Counter Section */
 .fact-counter-section {
-    background-color: #ffff; /* Light background color */
+    position: relative; /* Positioning for absolute elements */
+    overflow: hidden; /* Hide overflow to maintain layout */
     padding: 60px 0; /* Padding for the section */
+    color: #fff; /* Change text color for visibility against video */
+}
+
+.fact-counter-section video {
+    position: absolute; /* Position the video absolutely */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire section */
+    z-index: 0; /* Behind the content */
+}
+
+.fact-overlay {
+    position: absolute; /* Positioning for overlay */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 0; /* Above video */
 }
 
 .fact-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: #638181;
+    position: relative; /* To keep above the overlay */
+    z-index: 2; /* Above overlay */
 }
 
 .fact-grid {
     display: flex; /* Use flexbox for grid layout */
     flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: flex-start; /* Align to the left */
+    position: relative; /* Positioning for stacking context */
+    z-index: 3; /* Above overlay */
 }
 
 .fact-item {
-    text-align: center; /* Align text to the right */
+    flex: 1 0 50%; /* Each fact takes full width */
+    text-align: center; /* Align text to center */
     margin-bottom: 30px; /* Spacing between items */
     color: #BFCDCD;
-   border-bottom: 2px solid #2D435B;
-   border-bottom-left-radius: 50px ;
-   box-shadow: #2D435B;
-   border-bottom-right-radius: 50px ;
+    border-bottom: 2px solid #2D435B; /* Bottom border for each fact */
+    padding: 20px 0; /* Padding around fact numbers */
+    box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .fact-number {
     font-size: 3rem; /* Large font for numbers */
     font-weight: 700;
     color: #FF9F7C; /* Primary color for numbers */
+}
+
+/* New paragraph styling */
+.fact-description {
+    text-align: justify; /* Center the paragraph */
+    margin-top: 20px; /* Space above the paragraph */
+    font-size: 1rem; /* Font size for paragraph */
+    z-index: 2; /* Above overlay */
 }
 
 /* Responsive Adjustments */
@@ -323,8 +358,14 @@ footer .text-center p {
     .fact-number {
         font-size: 2.5rem;
     }
+    .fact-grid {
+        flex-direction: column; /* Stack facts vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+    .fact-item {
+        width: auto; /* Allow width to fit content */
+    }
 }
-
 /* expertise  */
 
 .expertise-section {

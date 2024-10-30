@@ -221,35 +221,42 @@
           </div>
         </section>
         <section class="fact-counter-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 d-flex align-items-center" data-aos="fade-right">
-                        <h2 class="fact-title">Our Achievements</h2>
-                    </div>
-                    <div class="col-md-6 d-flex justify-content-end" data-aos="fade-left">
-                        <div class="row fact-grid">
-                            <div class="col-6 fact-item text-center">
-                                <div class="fact-number" data-target="150">0</div>
-                                <p>Clients Served</p>
-                            </div>
-                            <div class="col-6 fact-item text-right">
-                                <div class="fact-number" data-target="200">0</div>
-                                <p>Projects Completed</p>
-                            </div>
-                            <div class="col-6 fact-item text-right">
-                                <div class="fact-number" data-target="20">0</div>
-                                <p>Years of Experiance</p>
-                            </div>
-                            <div class="col-6 fact-item text-right">
-                                <div class="fact-number" data-target="300">0</div>
-                                <p>Partnerships Established</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+          <video autoplay muted loop>
+              <source src="assets/video/Hero04.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="fact-overlay"></div> <!-- Overlay for the video -->
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 d-flex align-items-center justify-content-center" data-aos="fade-right">
+                      <h2 class="fact-title">Our Achievements</h2>
+                  </div>
+                  <div class="col-md-6 d-flex flex-column justify-content-center" data-aos="fade-left">
+                      <div class="row fact-grid">
+                          <!-- Each Fact in its own column -->
+                          <div class="col-12 fact-item">
+                              <div class="fact-number" data-target="150">0</div>
+                              <p>Clients Served</p>
+                          </div>
+                          <div class="col-12 fact-item">
+                              <div class="fact-number" data-target="200">0</div>
+                              <p>Projects Completed</p>
+                          </div>
+                          <div class="col-12 fact-item">
+                              <div class="fact-number" data-target="20">0</div>
+                              <p>Years of Experience</p>
+                          </div>
+                          <div class="col-12 fact-item">
+                              <div class="fact-number" data-target="300">0</div>
+                              <p>Partnerships Established</p>
+                          </div>
+                      </div>
+                      <!-- Paragraph under the fact grid -->
+                      <p class="fact-description">We are proud of our accomplishments and the impact we've made in the industry.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
          <!-- Call to Action with Background Image -->
 <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home01.jpg'); height: 250px;">
   <div class="container">
@@ -378,8 +385,8 @@
               <div class="card news-card" data-aos="fade-right">
                   <img src="assets/img/News01.jpg" class="card-img-top" alt="News Image 1">
                   <div class="card-body">
-                      <h5 class="card-title">Gitex 2024: Showcasing Innovations in Technology</h5>
-                      <p class="card-text">Gitex 2024 in Dubai promises groundbreaking tech advancements, featuring startups and major brands showcasing their latest innovations and solutions.<span class="dots">...</span><span class="more-text"> full description of the news 1.</span></p>
+                      <h5 class="card-title">"The Rise of Virtual Consulting: Adapting to a Digital-First Business Landscape"</h5>
+                      <p class="card-text">Consulting firms are shifting to virtual services, leveraging online platforms for remote consultations. This trend allows them to reach more clients and reduce costs, with a focus on flexibility in the evolving business landscape.</span></p>
                       <a href="news-page1.html" class="btn btn-primary read-more">...</a>
                   </div>
               </div>
@@ -389,8 +396,8 @@
               <div class="card news-card" data-aos="fade-left">
                   <img src="assets/img/News02.jpg" class="card-img-top" alt="News Image 2">
                   <div class="card-body">
-                    <h5 class="card-title">Futures of Technology in Saudi Arabia</h5>
-                    <p class="card-text">Saudi Arabia embraces digital transformation, investing heavily in AI, blockchain, and smart cities to enhance economic diversification and innovation.<span class="dots">...</span><span class="more-text"> full description of the news 2.</span></p>
+                    <h5 class="card-title">"Small Businesses Turn to Consulting Firms for Post-Pandemic Recovery Strategies"</h5>
+                    <p class="card-text">small businesses are increasingly hiring consultants to develop recovery strategies. These firms are helping identify new revenue streams and streamline operations, highlighting the value of expert guidance in tough economic times.<span class="dots">...</span><span class="more-text"> full description of the news 2.</span></p>
                       <a href="news-page2.html" class="btn btn-primary read-more">...</a>
                   </div>
               </div>
@@ -400,8 +407,8 @@
               <div class="card news-card" data-aos="fade-right">
                   <img src="assets/img/News03.jpg" class="card-img-top" alt="News Image 3">
                   <div class="card-body">
-                    <h5 class="card-title">Foresight Futures: Shaping Tomorrow’s Innovations</h5>
-                    <p class="card-text">Foresight Futures aims to identify and develop cutting-edge technologies, promoting sustainable solutions and fostering collaboration among industry leaders<span class="dots">...</span><span class="more-text"> full description of the news 3.</span></p>
+                    <h5 class="card-title">Sustainability Consulting Gains Traction as Companies Embrace ESG Initiatives</h5>
+                    <p class="card-text">As companies prioritize environmental, social, and governance (ESG) criteria, sustainability consulting is growing. Firms are using data analytics to help businesses improve their sustainability practices and meet consumer expectations for corporate responsibility.<span class="dots">...</span><span class="more-text"> full description of the news 3.</span></p>
                       <a href="news-page3.html" class="btn btn-primary read-more">....</a>
                   </div>
               </div>
@@ -517,57 +524,56 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-     document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll('.fact-number');
-    let hasCounted = false; // To ensure counting happens only once
-
-    const updateCount = (element, target) => {
-        let count = 0;
-        const increment = Math.ceil(target / 100); // Change the speed of increment
-
-        const interval = setInterval(() => {
-            count += increment;
-            if (count >= target) {
-                count = target;
-                clearInterval(interval);
-            }
-            element.textContent = count;
-        }, 20);
-    };
-
-    const startCounting = () => {
-        counters.forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            updateCount(counter, target);
-        });
-    };
-
-    // Set up Intersection Observer
-    const observerOptions = {
-        root: null, // Use the viewport as the root
-        rootMargin: '0px',
-        threshold: 0.1 // Trigger when at least 10% of the section is visible
-    };
-
-    const observerCallback = (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasCounted) {
-                startCounting();
-                hasCounted = true; // Prevent counting again
-                observer.unobserve(entry.target); // Stop observing the section after counting
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Observe the fact counter section
-    const factCounterSection = document.querySelector('.fact-counter-section');
-    observer.observe(factCounterSection);
-});
-        </script>
-
-<script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const counters = document.querySelectorAll('.fact-number');
+          let hasCounted = false; // To ensure counting happens only once
+  
+          const updateCount = (element, target) => {
+              let count = 0;
+              const increment = Math.ceil(target / 100); // Change the speed of increment
+  
+              const interval = setInterval(() => {
+                  count += increment;
+                  if (count >= target) {
+                      count = target;
+                      clearInterval(interval);
+                  }
+                  element.textContent = count;
+              }, 20);
+          };
+  
+          const startCounting = () => {
+              counters.forEach(counter => {
+                  const target = +counter.getAttribute('data-target');
+                  updateCount(counter, target);
+              });
+          };
+  
+          // Set up Intersection Observer
+          const observerOptions = {
+              root: null, // Use the viewport as the root
+              rootMargin: '0px',
+              threshold: 0.1 // Trigger when at least 10% of the section is visible
+          };
+  
+          const observerCallback = (entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting && !hasCounted) {
+                      startCounting();
+                      hasCounted = true; // Prevent counting again
+                      observer.unobserve(entry.target); // Stop observing the section after counting
+                  }
+              });
+          };
+  
+          const observer = new IntersectionObserver(observerCallback, observerOptions);
+  
+          // Observe the fact counter section
+          const factCounterSection = document.querySelector('.fact-counter-section');
+          observer.observe(factCounterSection);
+      });
+  </script>
+  <script>
   $(document).ready(function(){
       $('.news-slider').slick({
           slidesToShow: 2,   // Display 3 items side by side
