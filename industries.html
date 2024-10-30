@@ -13,6 +13,31 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
+
+
 .Industries h3 {
 
 color: #638181;
@@ -87,7 +112,7 @@ margin-top: 100px;
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Industries</h1>
@@ -99,7 +124,7 @@ margin-top: 100px;
             <div class="container">
              <!-- Sector 1 (Image on Right) -->
              <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets/img/1.png" alt="Sector Image 1" class="img-fluid rounded">
                 </div>
@@ -125,7 +150,7 @@ margin-top: 100px;
           
             <!-- Sector 2 (Image on Left) -->
             <div class="col-lg-12 mb-4 sector sector-left">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6">
                   <img src="assets\img\2.png" alt="Sector Image 2" class="img-fluid rounded">
                 </div>
@@ -149,7 +174,7 @@ margin-top: 100px;
           
             <!-- Sector 3 (Image on Right) -->
             <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets\img\3.png" alt="Sector Image 3" class="img-fluid rounded">
                 </div>
@@ -176,7 +201,7 @@ margin-top: 100px;
           
             <!-- Sector 4 (Image on Left) -->
             <div class="col-lg-12 mb-4 sector sector-left">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6">
                   <img src="assets\img\4.png" alt="Sector Image 4" class="img-fluid rounded">
                 </div>
@@ -203,7 +228,7 @@ margin-top: 100px;
           
            
             <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets\img\5.png" alt="Sector Image 5" class="img-fluid rounded">
                 </div>
@@ -232,7 +257,7 @@ margin-top: 100px;
           
               
               <div class="col-lg-12 mb-4 sector sector-left">
-                <div class="row align-items-center">
+                <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                   <div class="col-md-6">
                     <img src="assets\img\6.png" alt="Sector Image 6" class="img-fluid rounded">
                   </div>
@@ -260,7 +285,7 @@ margin-top: 100px;
             
               
               <div class="col-lg-12 mb-4 sector sector-right">
-                <div class="row align-items-center">
+                <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                   <div class="col-md-6 order-md-2">
                     <img src="assets\img\7.png" alt="Sector Image 7" class="img-fluid rounded">
                   </div>
@@ -292,7 +317,7 @@ margin-top: 100px;
             
               
               <div class="col-lg-12 mb-4 sector sector-left">
-                <div class="row align-items-center">
+                <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                   <div class="col-md-6">
                     <img src="assets\img\8.png" alt="Sector Image 8" class="img-fluid rounded">
                   </div>
@@ -319,7 +344,7 @@ margin-top: 100px;
             
              
               <div class="col-lg-12 mb-4 sector sector-right">
-                <div class="row align-items-center">
+                <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                   <div class="col-md-6 order-md-2">
                     <img src="assets\img\9.png" alt="Sector Image 9" class="img-fluid rounded">
                   </div>
@@ -348,7 +373,7 @@ margin-top: 100px;
           
              
              <div class="col-lg-12 mb-4 sector sector-left">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6">
                   <img src="assets\img\10.png" alt="Sector Image 10" class="img-fluid rounded">
                 </div>
@@ -378,7 +403,7 @@ margin-top: 100px;
           
            
             <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets\img\11.png" alt="Sector Image 11" class="img-fluid rounded">
                 </div>
@@ -405,7 +430,7 @@ margin-top: 100px;
           
             
             <div class="col-lg-12 mb-4 sector sector-left">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6">
                   <img src="assets\img\12.png" alt="Sector Image 12" class="img-fluid rounded">
                 </div>
@@ -433,7 +458,7 @@ margin-top: 100px;
           
               
             <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets\img\13.png" alt="Sector Image 13" class="img-fluid rounded">
                 </div>
@@ -462,7 +487,7 @@ margin-top: 100px;
           
           
              <div class="col-lg-12 mb-4 sector sector-left">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6">
                   <img src="assets\img\14.png" alt="Sector Image 14" class="img-fluid rounded">
                 </div>
@@ -494,7 +519,7 @@ margin-top: 100px;
           
               
             <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets\img\15.png" alt="Sector Image 13" class="img-fluid rounded">
                 </div>
@@ -516,7 +541,7 @@ margin-top: 100px;
           
           
              <div class="col-lg-12 mb-4 sector sector-left">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6">
                   <img src="assets\img\16.png" alt="Sector Image 14" class="img-fluid rounded">
                 </div>
@@ -539,7 +564,7 @@ margin-top: 100px;
       
       
             <div class="col-lg-12 mb-4 sector sector-right">
-              <div class="row align-items-center">
+              <div class="row align-items-center content-wrapper" style="background-color: #fff;" >
                 <div class="col-md-6 order-md-2">
                   <img src="assets\img\17.png" alt="Sector Image 13" class="img-fluid rounded">
                 </div>
