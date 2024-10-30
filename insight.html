@@ -12,6 +12,122 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
+<!-- Slick CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+
+ /* News Section: Latest News */
+ .latest-news-section .news-slider .news-item {
+    padding: 10px;
+}
+.latest-news-section .news-card {
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+.latest-news-section .news-card:hover {
+    transform: scale(1.05);
+}
+.latest-news-section .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.latest-news-section .card-text {
+    font-size: 1rem;
+    position: relative;
+}
+.latest-news-section .dots {
+    display: inline;
+}
+.latest-news-section .more-text {
+    display: none;
+}
+.latest-news-section .read-more {
+    margin-top: 10px;
+}
+
+.btn{
+    border: 3px solid;
+    border-color: #FF9F7C ;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #ffffff;
+  margin-left: 85%;
+  color:#2D435B;
+  }
+  .btn:hover{
+  border-color: #2D435B;
+    background-color: #2D435B;
+    color: #ffffff;
+  }
+
+
+.featured-article img {
+      width: 100%;
+      height: auto;
+    }
+    .article-list img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+    .read-more-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #007bff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .article-item, .featured-article {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .cta-section {
+    background-size: cover;
+    background-position: center;
+    background-color: #2D435B;
+    
+}
+.cta-section h2 {
+    color: #ffffff;
+    font-weight: bold;
+    
+    
+}
+
+.research-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .slick-prev {
+      position: absolute;
+      left: -40px; /* Position the arrow clearly to the left */
+      font-size: 1.5rem;
+      color: #007bff !important;
+      z-index: 2;
+    }
+    .slick-next {
+      font-size: 1.5rem;
+      color: #007bff !important;
+    }
+    .research-item {
+      cursor: pointer;
+    }
+
+    </style>
 </head>
 <body>
     <!-- Navbar Start -->
@@ -45,6 +161,160 @@
                 <h1 class="page-title">Insights</h1>
             </div>
         </section>
+
+        <section>
+
+            <div class="container my-5">
+                <h2 class="section-title">Featured Article</h2>
+                <div class="row">
+                  <!-- Left column - Featured Article -->
+                  <div class="col-md-8">
+                    <div id="featured-article" class="featured-article mb-3">
+                      <a href="#" class="stretched-link" style="text-decoration: none;">
+                        <img src="https://via.placeholder.com/600x300" alt="Featured Article Image">
+                        <h3 class="mt-3">Featured Article Title</h3>
+                        <p>Brief description of the featured article goes here. It provides an enticing preview of the content to encourage users to read more.</p>
+                      </a>
+                      <a href="#" class="read-more-btn">➜</a>
+                    </div>
+                  </div>
+            
+                  <!-- Right column - Article List -->
+                  <div class="col-md-4">
+                    <div class="article-list">
+                      <div class="d-flex align-items-center mb-3 article-item" data-title="Article 1" data-image="https://via.placeholder.com/600x300" data-description="Brief description of article 1.">
+                        <a href="#" class="stretched-link" style="text-decoration: none;">
+                          <img src="https://via.placeholder.com/80" alt="Article 1">
+                          <div class="ms-3">
+                            <h5>Article 1 Title</h5>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mb-3 article-item" data-title="Article 2" data-image="https://via.placeholder.com/600x300" data-description="Brief description of article 2.">
+                        <a href="#" class="stretched-link" style="text-decoration: none;">
+                          <img src="https://via.placeholder.com/80" alt="Article 2">
+                          <div class="ms-3">
+                            <h5>Article 2 Title</h5>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mb-3 article-item" data-title="Article 3" data-image="https://via.placeholder.com/600x300" data-description="Brief description of article 3.">
+                        <a href="#" class="stretched-link" style="text-decoration: none;">
+                          <img src="https://via.placeholder.com/80" alt="Article 3">
+                          <div class="ms-3">
+                            <h5>Article 3 Title</h5>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </section>
+           <!-- Call to Action with Background Image -->
+<section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home01.jpg'); height: 250px;">
+    <div class="container">
+        <h2 data-aos="fade-up" class="animated">⁠Empowering ambitious visions with <Span style="color: #FF9F7C;">Tailored Solutions</Span>.</h2>
+    </div>
+  </section>
+
+<!-- Section 03: Latest News -->
+<section class="latest-news-section py-5">
+    <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Latest News</h2>
+        <div class="news-slider mt-4">
+            <!-- News Item 1 -->
+            <div class="news-item">
+                <div class="card news-card" data-aos="fade-right">
+                    <img src="assets/img/News01.jpg" class="card-img-top" alt="News Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gitex 2024: Showcasing Innovations in Technology</h5>
+                        <p class="card-text">Gitex 2024 in Dubai promises groundbreaking tech advancements, featuring startups and major brands showcasing their latest innovations and solutions.<span class="dots">...</span><span class="more-text"> full description of the news 1.</span></p>
+                        <a href="news-page1.html" class="btn btn-primary read-more">...</a>
+                    </div>
+                </div>
+            </div>
+            <!-- News Item 2 -->
+            <div class="news-item">
+                <div class="card news-card" data-aos="fade-left">
+                    <img src="assets/img/News02.jpg" class="card-img-top" alt="News Image 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Futures of Technology in Saudi Arabia</h5>
+                      <p class="card-text">Saudi Arabia embraces digital transformation, investing heavily in AI, blockchain, and smart cities to enhance economic diversification and innovation.<span class="dots">...</span><span class="more-text"> full description of the news 2.</span></p>
+                        <a href="news-page2.html" class="btn btn-primary read-more">...</a>
+                    </div>
+                </div>
+            </div>
+            <!-- News Item 3 -->
+            <div class="news-item">
+                <div class="card news-card" data-aos="fade-right">
+                    <img src="assets/img/News03.jpg" class="card-img-top" alt="News Image 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Foresight Futures: Shaping Tomorrow’s Innovations</h5>
+                      <p class="card-text">Foresight Futures aims to identify and develop cutting-edge technologies, promoting sustainable solutions and fostering collaboration among industry leaders<span class="dots">...</span><span class="more-text"> full description of the news 3.</span></p>
+                        <a href="news-page3.html" class="btn btn-primary read-more">....</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more news items as needed -->
+        </div>
+    </div>
+  </section>
+  
+  
+   <!-- Call to Action with Background Image -->
+   <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home03.jpg'); height: 250px;">
+    <div class="container">
+        <h2 data-aos="fade-up" class="animated">⁠Shaping future success with <Span style="color: #FF9F7C;">Strategic Precision</Span>.</h2>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <div class="row">
+      <!-- Left column - Title and Arrows -->
+      <div class="col-md-4 d-flex flex-column align-items-start justify-content-center">
+        <h2>Research Highlights</h2>
+      </div>
+
+      <!-- Right column - Research Items -->
+      <div class="col-md-8 position-relative">
+        <div class="research-list">
+          <!-- Each research item is wrapped in an anchor tag for the clickable link -->
+          <a href="#" class="d-flex align-items-center mb-3 research-item">
+            <img src="https://via.placeholder.com/100" alt="Research 1">
+            <div class="ms-3">
+              <h5>Research 1 Title</h5>
+              <p>Brief description of research 1. Core findings summarized.</p>
+            </div>
+          </a>
+          <a href="#" class="d-flex align-items-center mb-3 research-item">
+            <img src="https://via.placeholder.com/100" alt="Research 2">
+            <div class="ms-3">
+              <h5>Research 2 Title</h5>
+              <p>Brief description of research 2. Core findings summarized.</p>
+            </div>
+          </a>
+          <a href="#" class="d-flex align-items-center mb-3 research-item">
+            <img src="https://via.placeholder.com/100" alt="Research 3">
+            <div class="ms-3">
+              <h5>Research 3 Title</h5>
+              <p>Brief description of research 3. Core findings summarized.</p>
+            </div>
+          </a>
+          <a href="#" class="d-flex align-items-center mb-3 research-item">
+            <img src="https://via.placeholder.com/100" alt="Research 4">
+            <div class="ms-3">
+              <h5>Research 4 Title</h5>
+              <p>Brief description of research 4. Core findings summarized.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
     </main>
     <!-- Main Content End -->
 
@@ -100,9 +370,102 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+     <!-- Jquery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+     <!-- slick js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         AOS.init();
     </script>
+
+<script>
+    // JavaScript to auto-switch featured article
+    let currentIndex = 0;
+    const articleItems = document.querySelectorAll('.article-item');
+    const featuredArticle = document.getElementById('featured-article');
+    const featuredImage = featuredArticle.querySelector('img');
+    const featuredTitle = featuredArticle.querySelector('h3');
+    const featuredDescription = featuredArticle.querySelector('p');
+
+    function updateFeaturedArticle(index) {
+      const item = articleItems[index];
+      featuredImage.src = item.getAttribute('data-image');
+      featuredTitle.textContent = item.getAttribute('data-title');
+      featuredDescription.textContent = item.getAttribute('data-description');
+    }
+
+    function autoSwitchArticle() {
+      updateFeaturedArticle(currentIndex);
+      currentIndex = (currentIndex + 1) % articleItems.length;
+    }
+
+    setInterval(autoSwitchArticle, 3000); // Change featured article every 3 seconds
+
+    // Update featured article on click
+    articleItems.forEach((item, index) => {
+      item.addEventListener('click', (event) => {
+        event.preventDefault();
+        currentIndex = index;
+        updateFeaturedArticle(currentIndex);
+      });
+    });
+  </script>
+
+<script>
+    $(document).ready(function(){
+        $('.news-slider').slick({
+            slidesToShow: 2,   // Display 3 items side by side
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+  </script>
+
+<script>
+    $(document).ready(function(){
+      // Initialize Slick Carousel for .research-list
+      $('.research-list').slick({
+        slidesToShow: 2,   // Show two items at a time
+        slidesToScroll: 2, // Scroll two items at a time
+        arrows: true,      // Enable navigation arrows
+        prevArrow: '<button type="button" class="slick-prev">&larr;</button>',
+        nextArrow: '<button type="button" class="slick-next">&rarr;</button>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,  // Show one item at a time on smaller screens
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
