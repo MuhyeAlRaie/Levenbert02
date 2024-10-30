@@ -107,7 +107,12 @@
     
 }
 
-.research-item img {
+  /* Set a minimum height for the section */
+  section.research-highlights {
+      min-height: 500px; /* Adjust this value as needed */
+      padding-top: 40px; /* Optional padding for spacing */
+    }
+    .research-item img {
       width: 100px;
       height: 100px;
       object-fit: cover;
@@ -126,7 +131,6 @@
     .research-item {
       cursor: pointer;
     }
-
     </style>
 </head>
 <body>
@@ -155,7 +159,7 @@
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Insights</h1>
@@ -270,8 +274,8 @@
     </div>
   </section>
 
-  <section class="container my-5">
-    <div class="row">
+  <section class="container my-5 research-highlights">
+    <div class="row align-items-center" style="padding: 100px 0;"> <!-- Add align-items-center here -->
       <!-- Left column - Title and Arrows -->
       <div class="col-md-4 d-flex flex-column align-items-start justify-content-center">
         <h2>Research Highlights</h2>
@@ -279,7 +283,7 @@
 
       <!-- Right column - Research Items -->
       <div class="col-md-8 position-relative">
-        <div class="research-list">
+        <div class="research-list" >
           <!-- Each research item is wrapped in an anchor tag for the clickable link -->
           <a href="#" class="d-flex align-items-center mb-3 research-item">
             <img src="https://via.placeholder.com/100" alt="Research 1">
@@ -315,7 +319,9 @@
   </section>
 
 
-    </main>
+
+
+  
     <!-- Main Content End -->
 
     <!-- Footer Start -->
@@ -453,12 +459,15 @@
         arrows: true,      // Enable navigation arrows
         prevArrow: '<button type="button" class="slick-prev">&larr;</button>',
         nextArrow: '<button type="button" class="slick-next">&rarr;</button>',
+        autoplay: true,
+            autoplaySpeed: 4000,
         responsive: [
           {
             breakpoint: 768,
             settings: {
               slidesToShow: 1,  // Show one item at a time on smaller screens
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              arrows: false
             }
           }
         ]
