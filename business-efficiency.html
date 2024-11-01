@@ -13,6 +13,21 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
+      .accordion-button.collapsed::after {
+
+background-image: url(assets/img/add-round-white-icon.svg);
+background-repeat: no-repeat;
+/* color: ; */
+
+}
+
+.accordion-button:not(.collapsed)::after {
+
+background-image: url(assets/img/add-round-grey-icon.svg);
+background-repeat: no-repeat;
+
+
+}
 
 .overlay-dots {
       position: relative;

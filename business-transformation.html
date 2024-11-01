@@ -13,6 +13,22 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
+.accordion-button.collapsed::after {
+
+  background-image: url(assets/img/add-round-white-icon.svg);
+  background-repeat: no-repeat;
+  /* color: ; */
+
+}
+
+.accordion-button:not(.collapsed)::after {
+
+background-image: url(assets/img/add-round-grey-icon.svg);
+background-repeat: no-repeat;
+
+
+}
+      
         .accordion-header{
 
 margin-top: 20px;
@@ -224,7 +240,7 @@ color: #638181;
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button style="height: 100px; background-color: #2D435B; color:#ffffff; font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                  <button style="height: 100px; background-color: #FF9F7C; color:#ffffff; font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
                     Cultural Transformation
                   </button>
                 </h2>
@@ -399,7 +415,7 @@ color: #638181;
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                  <button style="height: 100px; background-color: #2D435B; color:#ffffff; font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                  <button style="height: 100px; background-color: #FF9F7C; color:#ffffff; font-weight: bold;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
                     Digital Transformation 
                   </button>
                 </h2>
