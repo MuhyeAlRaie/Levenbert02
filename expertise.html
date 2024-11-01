@@ -14,6 +14,30 @@
     <link href="assets/css/styles.css" rel="stylesheet">
 
     <style>
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
+
         /* Title Section */
 .page-title-section {
     position: relative;
@@ -72,7 +96,7 @@
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Expertise</h1>
@@ -108,9 +132,9 @@
             
      
             
-              <img src="assets/img/e-1.png" alt="" class="img-fluid services-img">
+              <img src="assets/img/ex.png" alt="" class="img-fluid services-img">
               <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span> BUSINESS SERVICES AND SOLUTIONS</h3>
-              <p style="font-size: 18px;">
+              <p style="font-size: 16px;">
                  We deliver strategic services that empower organizations to thrive in dynamic environments through tailored, comprehensive business solutions. Combining industry insights, innovative practices, and a results-driven mindset, we address today’s challenges with clarity and foresight. Our expertise spans operational efficiency, strategic planning, and advanced solutions, enabling us to create measurable impact and long-term value at every stage of your journey.
               <p>
                <span style="font-size: 16px;font-weight: bold;color: #638181; ">Explore our expertise, where solutions drive your success and complexities become opportunities for growth! </span>           

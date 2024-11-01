@@ -54,6 +54,29 @@ color: #638181;
         font-size: 2rem;
     }
 }
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
    
 
     </style>
@@ -84,7 +107,7 @@ color: #638181;
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Business Agility</h1>
@@ -116,9 +139,9 @@ color: #638181;
 
 
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/img/e-4.png" alt="" class="img-fluid services-img">
+          <img src="assets/img/ex4.png" alt="" class="img-fluid services-img">
           <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span> Business Agility Solutions</h3>
-          <p style="font-size: 20px;">
+          <p style="font-size: 16px;">
             LEVENBERT offers a comprehensive suite of business agility solutions designed to help organizations thrive in an ever-changing and fast-paced business environment. These solutions are tailored to enable organizations to respond quickly to market changes, customer demands, and emerging opportunities. The focus is on fostering a culture of agility, continuous improvement, and innovation. Here is a detailed brief on the services and solutions provided under LEVENBERT's business agility solutions:
           </p>
 
@@ -392,7 +415,7 @@ color: #638181;
 <P>
 
 </P>
-            <p style="font-size: 20px;">
+            <p style="font-size: 16px;">
               LEVENBERT's business agility solutions are designed to equip organizations with the tools, methodologies, and mindset needed to navigate the complexities of the modern business landscape. By focusing on agile transformation, lean management, DevOps, agile project and portfolio management, BPM and automation, and agile culture and leadership development, LEVENBERT helps organizations become more responsive, efficient, and competitive.
             </p>
           </div>

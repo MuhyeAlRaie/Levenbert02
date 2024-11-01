@@ -54,6 +54,29 @@ color: #638181;
     }
 }
 
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
+
     </style>
 </head>
 <body>
@@ -82,7 +105,7 @@ color: #638181;
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Business Empowerment</h1>
@@ -114,9 +137,9 @@ color: #638181;
 
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/e-2.png" alt="" class="img-fluid services-img">
-            <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span>Business Empowerment Solutions</h3>
-            <p style="font-size: 20px;">
+            <img src="assets/img/ex2.png" alt="" class="img-fluid services-img">
+            <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span> Business Empowerment Solutions</h3>
+            <p style="font-size: 16px;">
               LEVENBERT is committed to delivering comprehensive business empowerment solutions designed to transform and elevate organizations. Our focus spans across several critical areas essential for sustainable growth and competitive advantage: Organizational Learning and Training Programs, Training Consulting, and Human Capital Consulting Services. Additionally, we offer tailored services and solutions to meet the unique clients' needs.
 
             </p>
@@ -434,7 +457,7 @@ color: #638181;
 <P>
 
 </P>
-            <p style="font-size: 20px;">
+            <p style="font-size: 16px;">
               LEVENBERT's business empowerment solutions are designed to provide holistic support to organizations, helping them build a capable, engaged, and high-performing workforce. Our comprehensive range of services ensures that every aspect of organizational learning, training, and human capital management is addressed, driving sustainable growth and success.
             </p>
           </div>

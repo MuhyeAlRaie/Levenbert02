@@ -13,6 +13,29 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
          .accordion-header{
 
 margin-top: 20px;
@@ -83,7 +106,7 @@ color: #638181;
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class=" overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Business Efficency</h1>
@@ -115,9 +138,9 @@ color: #638181;
 
 
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/img/e-8.png" alt="" class="img-fluid services-img">
-          <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span>Business Efficency Solutions</h3>
-          <p style="font-size: 20px;">
+          <img src="assets/img/ex8.png" alt="" class="img-fluid services-img">
+          <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span> Business Efficency Solutions</h3>
+          <p style="font-size: 16px;">
             LEVENBERT's Business Financial Efficiency Consulting Services are designed to help organizations optimize their financial performance and enhance their financial health. By focusing on cost management, financial planning, and performance measurement, LEVENBERT aims to drive financial sustainability and efficiency across all levels of the organization.
           </p>
 
@@ -484,7 +507,7 @@ color: #638181;
   <br><span style="color: #638181;">Increased Competitive Advantage: </span>  Optimized financial operations and investment strategies leading to a stronger competitive position in the market.</br>
   
 </P>
-            <p style="font-size: 20px;">
+            <p style="font-size: 16px;">
               LEVENBERT's Business Financial Efficiency Consulting Services provide comprehensive solutions to help organizations enhance their financial efficiency. By focusing on strategic planning, cost management, performance measurement, risk management, and technology integration, LEVENBERT ensures that businesses can achieve optimal financial performance and sustainability.
             </p>
           </div>

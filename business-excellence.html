@@ -52,6 +52,28 @@ color: #638181;
         font-size: 2rem;
     }
 }
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
 
 </style>
 </head>
@@ -81,7 +103,7 @@ color: #638181;
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Business Excellence</h1>
@@ -113,9 +135,9 @@ color: #638181;
 
 
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/img/e-3.png" alt="" class="img-fluid services-img">
-          <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span>Business Excellence Solutions</h3>
-          <p style="font-size: 20px;">
+          <img src="assets/img/ex3.png" alt="" class="img-fluid services-img">
+          <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span> Business Excellence Solutions</h3>
+          <p style="font-size: 16px;">
             LEVENBERT is committed to driving business excellence through comprehensive solutions that empower organizations to achieve outstanding performance and sustainable success. Our expertise in business excellence focuses on key areas that ensure holistic improvement and strategic advantage.
           </p>
 
@@ -178,7 +200,7 @@ color: #638181;
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
-                  <p>Our Institutional Excellence Support Services are designed to provide ongoing assistance and resources to organizations striving for excellence. We offers:
+                  <p>Our Institutional Excellence Support Services are designed to provide ongoing assistance and resources to organizations striving for excellence. We offer:
 
 
                   </p> 
@@ -400,7 +422,7 @@ color: #638181;
 <P>
 
 </P>
-            <p style="font-size: 20px;">
+            <p style="font-size: 16px;">
               LEVENBERT’s Business Excellence Solutions provide a comprehensive and integrated approach to achieving institutional excellence. By focusing on strategic planning, support services, award programs, implementation, and evaluation, we empower organizations to excel in all aspects of their operations. Partner with LEVENBERT to unlock your organization’s full potential and drive long-term success through excellence.
             </p>
           </div>

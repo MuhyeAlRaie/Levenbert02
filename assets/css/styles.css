@@ -549,7 +549,7 @@ a:hover {
     padding: 8px 0 8px 15px;
     border-left: 3px solid color-mix(in srgb, #FF9F7C, transparent 70%);
     margin: 20px 0;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    color: color-mix(in srgb, #638181, transparent 20%);
     transition: 0.3s;
     
   }
@@ -557,11 +557,11 @@ a:hover {
   .service-details .services-list a.active {
     color: var(--heading-color);
     font-weight: 700;
-    border-color: var(--accent-color);
+    border-color: #FF9F7C;
   }
   
   .service-details .services-list a:hover {
-    border-color: var(--accent-color);
+    border-color: #FF9F7C;
   }
   
   .service-details .services-img {

@@ -52,6 +52,28 @@ color: #638181;
         font-size: 2rem;
     }
 }
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
 
 </style>
 </head>
@@ -81,7 +103,7 @@ color: #638181;
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <main>
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Business Transformation</h1>
@@ -113,9 +135,9 @@ color: #638181;
 
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/e-1.png" alt="" class="img-fluid services-img">
+            <img src="assets/img/ex1.png" alt="" class="img-fluid services-img">
             <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;"></span> Business Transformation Solutions</h3>
-            <p style="font-size: 20px;">
+            <p style="font-size: 16px;">
               LEVENBERT's Business Transformation solutions drive holistic change through strategic, cultural, operational, and digital transformations. We align your vision with actionable strategies, foster a dynamic organizational culture, streamline operations for peak efficiency, and leverage digital innovations to ensure your business thrives in a rapidly evolving landscape.
 
             </p>
@@ -244,7 +266,7 @@ color: #638181;
                       <h3><span>Employee Engagement Programs:  </span></h3>
                       <ul>
                         <li><i class="bi bi-check-circle"></i> Creating initiatives that boost employee morale and motivation.
-                          Leadership Development: Training and mentoring leaders to drive cultural change and inspire teams.
+                          
                           
 
                         </li>
@@ -438,7 +460,7 @@ color: #638181;
                       </ul>
                       <h3><span>Process Automation:  </span></h3>
                       <ul>
-                        <li><i class="bi bi-check-circle"></i> Robotic process automation (RPA) and Workflow automation, optimization. And Intelligent automation solutions.
+                        <li><i class="bi bi-check-circle"></i> Robotic process automation (RPA) and Workflow automation, optimization and Intelligent automation solutions.
 
 
                         </li>
@@ -475,7 +497,7 @@ color: #638181;
 <P>
 
 </P>
-            <p style="font-size: 20px;">
+            <p style="font-size: 16px;">
               LEVENBERT’s business transformation solutions are designed to provide comprehensive support across these four pillars, ensuring that organizations are well-equipped to navigate the complexities of modern business environments.
             </p>
           </div>
