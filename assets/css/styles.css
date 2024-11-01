@@ -431,14 +431,12 @@ a:hover {
 # Services Section
 --------------------------------------------------------------*/
 .flip-circle {
-    color: #BFCDCD;
+    
     position: relative;
     width: 100%;
     padding-bottom: 100%; /* Maintain a square shape */
     perspective: 1000px;
     border-color: #2D435B;
-  border-radius: 50%;
-  border: 5px  solid ;
   }
   
   .flip-circle .circle-front,
@@ -464,7 +462,8 @@ a:hover {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    filter: brightness(0.5);}
+    filter: brightness() ;
+}
   
   .flip-circle .circle-text {
     position: absolute;
