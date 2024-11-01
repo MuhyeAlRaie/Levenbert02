@@ -319,12 +319,12 @@
   color: #fff;
 }
 
-.slick-prev,
+/* .slick-prev,
 .slick-next svg {
   height: auto;
   width: 18px;
   padding-bottom: 2px;
-}
+} */
 
 
 /* Title Section */
@@ -357,25 +357,40 @@
     }
 }
 
+#mega-projects{
+
+  margin-bottom: 50px;
+}
+
+.project-carousel {
+  position: relative;
+
+}
 
 .slick-prev, .slick-next {
-  height: 50px;
-  width: 50px;
+  position: absolute;
+  top: 100%; /* Places arrows below the slide content */
+  transform: translateY(50%); /* Centers vertically below the content */
   background: #fff;
   border: 3px solid;
+  height: 50px;
+  width: 50px;
+
   border-radius: 50%;
-  color: #638181; /* Adjust color as needed */
   font-size: 20px; /* Adjust size as needed */
-  z-index: 1;
+  color: #638181; /* Adjust color as needed */
 }
 
 .slick-prev {
-  left: -40px; /* Position adjustments */
+  left: 45%; /* Adjust left position for centering */
 }
 
 .slick-next {
-  right: -40px; /* Position adjustments */
+  right: 45%; /* Adjust right position for centering */
 }
+
+
+
 
 .project-logo {
 
@@ -866,7 +881,7 @@
 
 <section id="mega-projects" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Mega Projects</h2>
+    <h2 class="section-title">Mega Project</h2>
     <div class="project-carousel">
       <!-- Slide 1 -->
       <div class="project-slide">
@@ -893,7 +908,7 @@
             <h5 style="padding-top: 20px; color: #638181;">Client Profile</h5>
             <p>The Council was established in 2012 to develop strategies & policies that enable sustainable development in the Sultanate. Apart from formulating strategies, the council also sets regulations that work in favor of such strategies and drive economic diversity. Under its umbrella, both the Secretariat General and the National Centre for Statistics & Information work closely with the council to deliver results.
             </p>
-            <div class="row d-flex justify-content-end " >
+            <div class="row d-flex justify-content-end " style="padding-top: 100px;" >
               <img src="assets/img/Clients/oman-vision.jpg" alt="Project Logo" id="projectLogo" class="project-logo">
             </div>
           </div>
@@ -929,7 +944,7 @@
             <p>stc Group is the digital transformation engine in the region, offering advanced solutions and driving a role in the digitisation process. The group provides a comprehensive suite of services encompassing digital infrastructure, cloud computing, cybersecurity, Internet of Things (IoT), artificial intelligence (AI), digital payments, digital media, and digital entertainment. The group comprises over 14 subsidiaries across the Kingdom of Saudi Arabia and the Middle and North Africa region and Europe.
             </p>
             
-             <div class="row d-flex justify-content-end " >
+             <div class="row d-flex justify-content-end "  style="padding-top: 100px;">
                <img src="assets/img/Clients/stc.png" alt="Project Logo" id="projectLogo" class="project-logo">
              </div>
             
