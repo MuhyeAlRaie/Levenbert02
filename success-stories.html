@@ -11,6 +11,8 @@
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
    
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
@@ -324,37 +326,7 @@
   padding-bottom: 2px;
 }
 
-.slick-prev .btn,
-.slick-next .btn {
-  border-radius: 0;
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-color: #2D435B;
-  border: none;
-}
 
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 0;
-  z-index: 9999;
-  border-radius: 0;
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.slick-prev {
-  left: 0;
-  color: #FF9F7C;
-}
-
-.slick-next {
-  right: 30px;
-}
 /* Title Section */
 .page-title-section {
     position: relative;
@@ -385,6 +357,29 @@
     }
 }
 
+
+.slick-prev, .slick-next {
+  background: none;
+  border: none;
+  color: #638181; /* Adjust color as needed */
+  font-size: 24px; /* Adjust size as needed */
+  z-index: 1;
+}
+
+.slick-prev {
+  left: -40px; /* Position adjustments */
+}
+
+.slick-next {
+  right: -40px; /* Position adjustments */
+}
+
+.project-logo {
+
+  width: auto;
+  height: 100px;
+  
+}
     
 
     </style>
@@ -893,6 +888,8 @@
             <h5 style="padding-top: 20px; color: #638181;">Client Profile</h5>
             <p>The Council was established in 2012 to develop strategies & policies that enable sustainable development in the Sultanate. Apart from formulating strategies, the council also sets regulations that work in favor of such strategies and drive economic diversity. Under its umbrella, both the Secretariat General and the National Centre for Statistics & Information work closely with the council to deliver results.
             </p>
+            <img src="assets/img/Clients/oman-vision.jpg" alt="Project Logo" id="projectLogo" class="project-logo">
+
           </div>
         </div>
       </div>
@@ -925,6 +922,8 @@
             <h5 style="padding-top: 20px; color: #638181;">Client Profile</h5>
             <p>stc Group is the digital transformation engine in the region, offering advanced solutions and driving a role in the digitisation process. The group provides a comprehensive suite of services encompassing digital infrastructure, cloud computing, cybersecurity, Internet of Things (IoT), artificial intelligence (AI), digital payments, digital media, and digital entertainment. The group comprises over 14 subsidiaries across the Kingdom of Saudi Arabia and the Middle and North Africa region and Europe.
             </p>
+            <img src="assets/img/Clients/stc.png" alt="Project Logo" id="projectLogo" class="project-logo">
+
           </div>
         </div>
       </div>
@@ -1487,17 +1486,18 @@
     $('.project-carousel').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
       dots: false,
       infinite: true,
       autoplay: true,
       autoplaySpeed: 5000,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
       responsive: [
         {
           breakpoint: 768,
           settings: {
             arrows: false,
-            dots: false
+            dots: true
           }
         }
       ]
