@@ -16,6 +16,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
+
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 35px 50px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
+
+
 /* Title Section */
 .page-title-section {
     position: relative;
@@ -151,16 +177,44 @@
       position: absolute;
       left: -40px; /* Position the arrow clearly to the left */
       font-size: 1.5rem;
-      color: #007bff !important;
+      color: #FF9F7C !important;
       z-index: 2;
     }
     .slick-next {
       font-size: 1.5rem;
-      color: #007bff !important;
+      color: #FF9F7C !important;
     }
     .research-item {
       cursor: pointer;
     }
+
+    .quote-icon {
+      font-size: 2rem;
+      color: #6c757d;
+    }
+    .poster-wrapper {
+      position: relative;
+      cursor: pointer;
+    }
+    .poster-wrapper img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+    }
+    .video-wrapper {
+      display: none;
+    }
+
     </style>
 </head>
 <body>
@@ -189,6 +243,8 @@
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
+
+    <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
                 <h1 class="page-title">Insights</h1>
@@ -307,7 +363,7 @@
     <div class="row align-items-center" style="padding: 100px 0;"> <!-- Add align-items-center here -->
       <!-- Left column - Title and Arrows -->
       <div class="col-md-4 d-flex flex-column align-items-start justify-content-center">
-        <h2>Research Highlights</h2>
+        <h2 style="color: #2D435B; font-size: 3rem;">Research Highlights <span class="bi-circle-fill" style="font-size: 1rem;color: #FF9F7C;"></span> </h2>
       </div>
 
       <!-- Right column - Research Items -->
@@ -347,12 +403,78 @@
     </div>
   </section>
 
+  <!-- Call to Action with Background Image -->
+  <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home03.jpg'); height: 250px;">
+    <div class="container">
+        <h2 data-aos="fade-up" class="animated">Be <Span style="color: #FF9F7C;">Informed</Span>, Be<Span style="color: #FF9F7C;"> Empowered</Span>.</h2>
+    </div>
+  </section>
 
 
-
+<section>
+  <div class="container py-5">
+    <!-- First Section -->
+    <div class="row align-items-center my-5" data-aos="fade-up">
+      <div class="col-md-6">
+        <span class="quote-icon">“</span>
+        <h3 class="mt-2">Inspiring Quote Goes Here</h3>
+        <p>Here is the main content of the quote, providing context and impact.</p>
+        <p><strong>John Doe</strong><br>CEO, Example Company</p>
+      </div>
+      <div class="col-md-6">
+        <div class="poster-wrapper" onclick="playVideo(this)">
+          <img src="https://via.placeholder.com/600x400" alt="Video Poster">
+          <span class="play-button">&#9658;</span>
+          <div class="video-wrapper">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Section (Reversed Layout) -->
+    <div class="row align-items-center my-5" data-aos="fade-up">
+      <div class="col-md-6 order-md-2">
+        <span class="quote-icon">“</span>
+        <h3 class="mt-2">Another Inspiring Quote</h3>
+        <p>This quote highlights another important point.</p>
+        <p><strong>Jane Smith</strong><br>CTO, Another Company</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="poster-wrapper" onclick="playVideo(this)">
+          <img src="https://via.placeholder.com/600x400" alt="Video Poster">
+          <span class="play-button">&#9658;</span>
+          <div class="video-wrapper">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container py-5">
+    <!-- Third Section -->
+    <div class="row align-items-center my-5" data-aos="fade-up">
+      <div class="col-md-6">
+        <span class="quote-icon">“</span>
+        <h3 class="mt-2">Inspiring Quote Goes Here</h3>
+        <p>Here is the main content of the quote, providing context and impact.</p>
+        <p><strong>John Doe</strong><br>CEO, Example Company</p>
+      </div>
+      <div class="col-md-6">
+        <div class="poster-wrapper" onclick="playVideo(this)">
+          <img src="https://via.placeholder.com/600x400" alt="Video Poster">
+          <span class="play-button">&#9658;</span>
+          <div class="video-wrapper">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
   
     <!-- Main Content End -->
-
+  </main>
     <!-- Footer Start -->
     <footer class="text-center text-lg-start">
         <div class="container p-4">
@@ -503,6 +625,21 @@
       });
     });
   </script>
+
+<script>
+  AOS.init();
+
+  function playVideo(element) {
+    const poster = element.querySelector('img');
+    const playButton = element.querySelector('.play-button');
+    const videoWrapper = element.querySelector('.video-wrapper');
+
+    // Hide poster and play button, show video
+    poster.style.display = 'none';
+    playButton.style.display = 'none';
+    videoWrapper.style.display = 'block';
+  }
+</script>
 
     <script src="assets/js/main.js"></script>
 </body>
