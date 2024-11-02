@@ -50,7 +50,7 @@ section {
 }
 
 .navbar.scrolled {
-    background-color: var(--primary-color); /* Add your desired background color */
+    background-color: var(--secondary-color); /* Add your desired background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,7 +73,7 @@ section {
 
 /* Footer */
 footer {
-    background-color: #2D435B;
+    background-color: #638181;
     color: var(--light-color);
     padding: 2rem 0;
 }
@@ -489,6 +489,7 @@ a:hover {
   .flip-circle .circle-back p {
     margin: 0;
     font-size: 1rem;
+    text-align: center;
   }
   
   .flip-circle:hover .circle-front {
