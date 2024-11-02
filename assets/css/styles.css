@@ -42,6 +42,17 @@ section {
     --dot-color: #FF9F7C;
 }
 
+.header {
+    --background-color: transparent;
+    --default-color: #3d3d3d;
+    --heading-color: #3d3d3d;
+    --contrast-color: #ffffff;
+    color: #3d3d3d;
+    transition: all 0.5s;
+    z-index: 997;
+    background-color: var(--background-color);
+  }
+
 /* Navbar - Transparent and Scrolled */
 .navbar {
     background-color: transparent;
@@ -100,6 +111,62 @@ section {
     color: #fff;
     background-color: transparent;
 }
+
+
+ .topbar {
+    background-color: transparent;
+    height: 30px;
+    padding: 0;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index:9;
+  }
+  .topbar.scrolled{
+
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+   .topbar .contact-info i {
+    font-style: normal;
+    color: var(--accent-color);
+  }
+  
+   .topbar .contact-info i a,
+   .topbar .contact-info i span {
+    padding-left: 5px;
+    color: var(--default-color);
+  }
+  
+  @media (max-width: 575px) {
+  
+     .topbar .contact-info i a,
+     .topbar .contact-info i span {
+      font-size: 13px;
+    }
+  }
+  
+   .topbar .contact-info i a {
+    line-height: 0;
+    transition: 0.3s;
+  }
+  
+   .topbar .contact-info i a:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+  }
+  
+   .topbar .social-links a {
+    color: color-mix(in srgb, #2D435B, transparent 40%);
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 20px;
+  }
+  
+   .topbar .social-links a:hover {
+    color: #FF9F7C;
+  }
+
 
 /* Footer */
 footer {
