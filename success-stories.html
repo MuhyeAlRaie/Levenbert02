@@ -17,6 +17,37 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
+
+.quote-icon {
+      font-size: 3rem;
+      color: #FF9F7C;
+    }
+    .poster-wrapper {
+      position: relative;
+      cursor: pointer;
+    }
+    .poster-wrapper img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      background-color: #ff9f7c88;
+      border-radius: 50%;
+      padding: 10px;
+      padding-left:30px ;
+      height: 100px;
+      width: 100px;
+    }
+    .video-wrapper {
+      display: none;
+    }
+
      .cta-section {
     background-size: cover;
     background-position: center;
@@ -1349,12 +1380,107 @@ font-size: 1rem;
         
 
               <!-- Call to Action with Background Image -->
+              <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-success03.png'); height: 250px;">
+                <div class="container">
+                    <h2 >A proven approach to  <Span style="color: #FF9F7C;">Success</Span>.</h2>
+                </div>
+              </section>
+
+        <section>
+              <h2 class="section-title" style="margin-top: 50px;">Levenbert’s Methodologies </h2>
+
+              <div class="container py-5">
+                <!-- First Section -->
+                <div class="row align-items-center my-5" >
+                  <div class="col-md-7">
+                    <span class="quote-icon bi bi-circle-fill"> <span style="color: #638181;">4X4 Methodology</span> </span>
+                    <h3 class="mt-2" style="color: #2D435B;">Levenbert Building and Developing Corporate Culture Methodology</h3>
+                    <p style="color: #638181;">LEVENBERT's 4x4 Methodology for implementing corporate culture combines industry knowledge and regional understanding to deliver a comprehensive, strategically aligned approach from leadership down. This structured, four-phase process ensures cultural integration throughout the organization, grounded in measurable outcomes and sustained through tailored knowledge transfer.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="poster-wrapper" onclick="playVideo(this)">
+                      <img src="assets/img/Qoute01.png" alt="Video Poster">
+                      <span class="play-button">&#9658;</span>
+                      <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/hwKY0csZjV0?autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Second Section (Reversed Layout) -->
+                <div class="row align-items-center my-5" >
+                  <div class="col-md-7 order-md-2">
+                    <span class="quote-icon bi bi-circle-fill"><span style="color: #638181;"> 247 Methodology</span> </span>
+                    <h3 class="mt-2" style="color: #2D435B;">Levenbert Strategy Implementation and Monitoring Methodology</h3>
+                    
+                    <p style="color: #638181;">LEVENBERT’s 247 methodology provides a structured, multi-phase approach to Balanced Scorecard implementation, enabling companies to effectively monitor and evaluate business strategy performance across financial, customer, process, and people perspectives. Our 247 methodology guides organizations from strategic planning and development through to implementation, evaluation, and continuous support, ensuring alignment and measurable progress towards corporate objectives.</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                    <div class="poster-wrapper" onclick="playVideo(this)">
+                      <img src="assets/img/Qoute02.png" alt="Video Poster">
+                      <span class="play-button">&#9658;</span>
+                      <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dkNBbwwxHWE?autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="container py-5">
+                <!-- Third Section -->
+                <div class="row align-items-center my-5" >
+                  <div class="col-md-7">
+                    <span class="quote-icon bi bi-circle-fill"><span style="color: #638181;"> C3 Methodology</span> </span>
+                    <h3 class="mt-2" style="color: #2D435B;">LEVENBERT Comprehensive Contact Center Methodology</h3>
+                    <p style="color: #638181;">LEVENBERT’s comprehensive C3P methodology and approach ensures contact centers achieve operational efficiency, address high turnover and recruitment challenges, and offers a standardized evaluation for agent skills and training effectiveness.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="poster-wrapper" onclick="playVideo(this)">
+                      <img src="assets/img/Qoute03.png" alt="Video Poster">
+                      <span class="play-button">&#9658;</span>
+                      <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/fCMIB3s6wNc?autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                 <!-- Four Section (Reversed Layout) -->
+                 <div class="row align-items-center my-5" >
+                  <div class="col-md-7 order-md-2">
+                    <span class="quote-icon bi bi-circle-fill"><span style="color: #638181;"> 4Ms Methodology</span> </span>
+                    <h3 class="mt-2" style="color: #2D435B;">LEVENBERT Marketing Management Master Model Methodology</h3>
+                    
+                    <p style="color: #638181;">LEVENBERT’s Marketing Management Master Model (4Ms) provides a structured, four-phase methodology to create and execute effective marketing strategies, ensuring alignment with best practices and maximizing return on investment. With expertise spanning all facets of marketing, LEVENBERT provides end-to-end support to elevate organizational marketing performance.</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                    <div class="poster-wrapper" onclick="playVideo(this)">
+                      <img src="assets/img/Qoute04.png" alt="Video Poster">
+                      <span class="play-button">&#9658;</span>
+                      <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Zc7Lh_3-IGM?autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+
+
+       <!-- Call to Action with Background Image -->
               <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-success02.png'); height: 250px;">
                 <div class="container">
                     <h2 >Setting the Benchmark for <Span style="color: #FF9F7C;">Excellence</Span>.</h2>
                 </div>
               </section>
-      
+
+
+
+
+
          <section class="container my-5">
           <div class="row">
             <!-- Left column with sticky title -->
@@ -1931,6 +2057,21 @@ font-size: 1rem;
       ]
     });
   });
+</script>
+
+<script>
+ 
+
+  function playVideo(element) {
+    const poster = element.querySelector('img');
+    const playButton = element.querySelector('.play-button');
+    const videoWrapper = element.querySelector('.video-wrapper');
+
+    // Hide poster and play button, show video
+    poster.style.display = 'none';
+    playButton.style.display = 'none';
+    videoWrapper.style.display = 'block';
+  }
 </script>
  
   
