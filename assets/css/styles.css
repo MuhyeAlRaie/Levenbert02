@@ -605,7 +605,7 @@ a:hover {
     perspective: 1000px;
     border-color: #3d3d3d;
   border-radius: 50%;
-  border: 5px groove;
+  border: 0px groove;
   }
   
   .circle-back a{
