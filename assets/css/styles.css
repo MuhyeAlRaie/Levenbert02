@@ -456,7 +456,7 @@ footer .text-center p {
         font-size: 2.5rem;
     }
     .fact-grid {
-        flex-direction: column; /* Stack facts vertically on small screens */
+        flex-direction: row; /* Stack facts vertically on small screens */
         align-items: center; /* Center align items */
     }
     .fact-item {
