@@ -204,6 +204,50 @@
             text-align: center;
             padding: 20px;
         }
+
+        .last-colmm{
+          padding-top: 250px;
+          color:#fff ;
+          
+        }
+
+        .last-cont {
+          
+          padding-left: 10px;
+          font-size: 2.5rem;
+          border-left: 3px #638181 solid;
+        }
+        .last-cont span {
+
+          font-size: 3rem;
+        }
+
+       /* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bg-image{
+      
+      height: 50vh;
+    }
+    .last-colmm{
+
+      padding-top: 50px;
+    }
+    .last-cont{
+      padding-left: 0px;
+font-size: 1rem;
+    }
+    .last-cont span {
+
+font-size: 1.5rem;
+}
+}
+
+@media (max-width: 1024px) {
+    .bg-image{
+      background-position: left;
+      height: 50vh;
+    }
+}
     </style>
 </head>
 <body>
@@ -542,10 +586,18 @@
 </section>
 
 <section class="bg-image">
-  <div class="overlay"></div>
-  <div class="content">
+  <div class=" overlay"></div>
+   <div class="row py-5">
+    <div class="col-6">
+
+
+    </div>
+    <div class="col-6 last-colmm justify-content-center" >
+      <h2 class="last-cont" >Innovation-driven, client-focused<br> consulting <span style="color: #638181; ">Excellence</span>. 
+      </h2>
+    </div>
       
-    
+    </div>
   </div>
 </section>
 
