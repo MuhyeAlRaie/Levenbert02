@@ -54,6 +54,18 @@ font-weight: bold;
 margin-top: 100px;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .img-fluid {
+
+      margin-bottom: 50px;
+    }
+    .sector {
+
+margin-top: 15px;
+}
+}
+
 /* Title Section */
 .page-title-section {
     position: relative;
@@ -81,6 +93,46 @@ margin-top: 100px;
 @media (max-width: 768px) {
     .page-title {
         font-size: 2rem;
+    }
+}
+
+.bg-image {
+            background-image: url('./assets/img/claim02.png'); /* Replace with your image URL */
+            background-color: #FF9F7C;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh; /* Adjust height as needed */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:#ff9f7c00; /* Dark overlay */
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2; /* Ensure content is above the overlay */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+       /* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bg-image{
+      background-position: left;
+      height: 50vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bg-image{
+      background-position: left;
+      height: 50vh;
     }
 }
 
@@ -626,7 +678,13 @@ margin-top: 100px;
           </div>
           </section>
 
-
+          <section class="bg-image">
+            <div class="overlay"></div>
+            <div class="content">
+                
+              
+            </div>
+          </section>
 
 
     </main>
