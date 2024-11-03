@@ -179,6 +179,31 @@
     
     
 }
+
+.bg-image {
+            background-image: url('./assets/img/claim.png'); /* Replace with your image URL */
+            background-color: #FF9F7C;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh; /* Adjust height as needed */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:#ff9f7c00; /* Dark overlay */
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2; /* Ensure content is above the overlay */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -471,7 +496,7 @@
                   <img src="assets/img/news03.jpg" class="card-img-top" alt="News Image 3">
                   <div class="card-body">
                     <h5 class="card-title">Sustainability Consulting Gains Traction as Companies Embrace ESG Initiatives</h5>
-                    <p class="card-text">As companies prioritize environmental, social, and governance (ESG) criteria, sustainability consulting is growing. Firms are using data analytics to help businesses improve their sustainability practices and meet consumer expectations<span class="dots">...</span><span class="more-text"> full description of the news 3.</span></p>
+                    <p class="card-text">As companies prioritize environmental, social, and governance (ESG) criteria, sustainability consulting is growing. Firms are using data analytics to help businesses improve their sustainability practices and meet<span class="dots">...</span><span class="more-text"> full description of the news 3.</span></p>
                       <a href="#" class="btn btn-primary read-more">....</a>
                   </div>
               </div>
@@ -513,6 +538,14 @@
         </div>
   
     </div>
+  </div>
+</section>
+
+<section class="bg-image">
+  <div class="overlay"></div>
+  <div class="content">
+      
+    
   </div>
 </section>
 

@@ -13,6 +13,9 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+
     <style>
 
 .overlay-dots {
@@ -189,6 +192,78 @@
       flex-direction: column;
       justify-content: center;
     }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+.business-journey {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Horizontal scrolling container */
+.horizontal-scroll {
+  display: flex;
+  width: 300vw; /* 3 slides, each taking 100vw */
+}
+
+.horizontal-scroll .journey-item {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Vertical scrolling container */
+.vertical-scroll {
+  display: flex;
+  flex-direction: column;
+  height: 300vh; /* 3 slides, each taking 100vh */
+}
+
+.vertical-scroll .journey-item {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Footer styling */
+/* footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+} */
+
+/* Optional colors for different slides */
+.horizontal-scroll .journey-item:nth-child(1) { background-color: #3498db; }
+.horizontal-scroll .journey-item:nth-child(2) { background-color: #e74c3c; }
+.horizontal-scroll .journey-item:nth-child(3) { background-color: #f1c40f; }
+.vertical-scroll .journey-item:nth-child(1) { background-color: #9b59b6; }
+.vertical-scroll .journey-item:nth-child(2) { background-color: #2ecc71; }
+.vertical-scroll .journey-item:nth-child(3) { background-color: #34495e; }
    
     </style>
 </head>
@@ -676,7 +751,40 @@
   </section>
 
 
-  
+  <section class="business-journey">
+    <div class="container-fluid">
+      <!-- Horizontal scrolling divs -->
+      <div class="horizontal-scroll">
+        <div class="journey-item"> <!-- Div 1 -->
+          <h3>Milestone 1</h3>
+          <p>Details about the first milestone.</p>
+        </div>
+        <div class="journey-item"> <!-- Div 2 -->
+          <h3>Milestone 2</h3>
+          <p>Details about the second milestone.</p>
+        </div>
+        <div class="journey-item"> <!-- Div 3 -->
+          <h3>Milestone 3</h3>
+          <p>Details about the third milestone.</p>
+        </div>
+      </div>
+      <!-- Vertical scrolling divs -->
+      <div class="vertical-scroll">
+        <div class="journey-item"> <!-- Div 4 -->
+          <h3>Milestone 4</h3>
+          <p>Details about the fourth milestone.</p>
+        </div>
+        <div class="journey-item"> <!-- Div 5 -->
+          <h3>Milestone 5</h3>
+          <p>Details about the fifth milestone.</p>
+        </div>
+        <div class="journey-item"> <!-- Div 6 -->
+          <h3>Milestone 6</h3>
+          <p>Details about the sixth milestone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   
 
        
