@@ -266,13 +266,31 @@ padding-right: 125px;
   color: #000;
 }
 
+.vertical-scroll .journey-item p {
+
+  padding-left: 125px;
+  padding-right: 125px;
+}
+
+@media (max-width: 768px) {
+
+  .vertical-scroll .journey-item p {
+
+padding-left: 0;
+padding-right: 0;
+}
+.vertical-scroll .journey-item h3 {
+  font-size: 0.9rem;
+}
+}
+
 /* Optional colors for different slides */
-.horizontal-scroll .journey-item:nth-child(1) { background-color: #fff; }
-.horizontal-scroll .journey-item:nth-child(2) { background-color: #fff; }
-.horizontal-scroll .journey-item:nth-child(3) { background-color: #fff; }
-.vertical-scroll .journey-item:nth-child(1) { background-color: #fff; }
-.vertical-scroll .journey-item:nth-child(2) { background-color: #ffff; }
-.vertical-scroll .journey-item:nth-child(3) { background-color: #fff; }
+.horizontal-scroll .journey-item:nth-child(1) { background-color: transparent; }
+.horizontal-scroll .journey-item:nth-child(2) { background-color: transparent; }
+.horizontal-scroll .journey-item:nth-child(3) { background-color: transparent; }
+.vertical-scroll .journey-item:nth-child(1) { background-color: transparent; }
+.vertical-scroll .journey-item:nth-child(2) { background-color: transparent; }
+.vertical-scroll .journey-item:nth-child(3) { background-color: transparent; }
     </style>
 </head>
 <body>
@@ -829,24 +847,24 @@ padding-right: 125px;
          </div>
         </div>
       </div>
-      <!-- Vertical scrolling container -->
-      <div class="vertical-scroll-container">
-        <div class="vertical-scroll">
-          <div class="journey-item"> <!-- Div 4 -->
-            <h3>Milestone 4</h3>
-            <p>Details about the fourth milestone.</p>
-          </div>
-          <div class="journey-item"> <!-- Div 5 -->
-            <h3>Milestone 5</h3>
-            <p>Details about the fifth milestone.</p>
-          </div>
-          <div class="journey-item"> <!-- Div 6 -->
-            <h3>Milestone 6</h3>
-            <p>Details about the sixth milestone.</p>
-          </div>
+       <!-- Vertical scrolling container -->
+    <div class="vertical-scroll-container">
+      <div class="vertical-scroll">
+        <div class="journey-item"> <!-- Div 4 -->
+          <h3>Milestone 4</h3>
+          <p>Details about the fourth milestone.</p>
+        </div>
+        <div class="journey-item"> <!-- Div 5 -->
+          <h3>Milestone 5</h3>
+          <p>Details about the fifth milestone.</p>
+        </div>
+        <div class="journey-item"> <!-- Div 6 -->
+          <h3>Milestone 6</h3>
+          <p>Details about the sixth milestone.</p>
         </div>
       </div>
     </div>
+  </div>
   </section>
   
 
