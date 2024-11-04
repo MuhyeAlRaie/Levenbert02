@@ -22,47 +22,47 @@ window.addEventListener('scroll', function () {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
-  
-    // Horizontal scroll effect for the first three divs (horizontal slides)
-    gsap.to(".horizontal-scroll", {
-      xPercent: -100 * (document.querySelectorAll(".horizontal-scroll .journey-item").length - 1),
-      ease: "none",
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Smooth horizontal scroll effect for the first three divs (horizontal slides)
+  gsap.to(".horizontal-scroll", {
+    xPercent: -34* (document.querySelectorAll(".horizontal-scroll .journey-item").length - 1),
+    ease: "power1.inOut", // Smooth easing
+    scrollTrigger: {
+      trigger: ".horizontal-scroll",
+      start: "top top",
+      end: "+=334vw", // Adjusted for three slides in horizontal scrolling
+      pin: true,
+      scrub: 0.3, // Reduced scrub value for smoothness
+    }
+  });
+
+  // Smooth vertical scroll effect for the last three divs (vertical slides)
+  gsap.to(".vertical-scroll", {
+    yPercent: -5 * (document.querySelectorAll(".vertical-scroll .journey-item").length - 1),
+    ease: "power1.inOut", // Smooth easing
+    scrollTrigger: {
+      trigger: ".vertical-scroll-container",
+      start: "top top",
+      end: "+=300vh", // Adjusted for three slides in vertical scrolling
+      pin: true,
+      scrub: 0.5, // Reduced scrub value for smoothness
+    }
+  });
+
+  // Fade-in effect for each .journey-item with smooth transition when it comes into view
+  gsap.utils.toArray(".journey-item").forEach((item) => {
+    gsap.from(item, {
+      opacity: 0,
+      y: 100,
+      duration: 1.2, // Slightly increased duration for smooth fade-in
+      ease: "power1.out", // Smooth fade-in easing
       scrollTrigger: {
-        trigger: ".horizontal-scroll",
-        start: "top top",
-        end: () => "+=" + (window.innerWidth * 3), // 3 slides, each taking up 100vw
-        pin: true,
-        scrub: true,
+        trigger: item,
+        start: "top 50%",
+        toggleActions: "play none none reverse"
       }
-    });
-  
-    // Vertical scroll effect for the last three divs (vertical slides)
-    gsap.to(".vertical-scroll", {
-      yPercent: -100 * (document.querySelectorAll(".vertical-scroll .journey-item").length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".vertical-scroll",
-        start: "top top",
-        end: () => "+=" + (window.innerHeight * 3), // 3 slides, each taking up 100vh
-        pin: true,
-        scrub: true,
-      }
-    });
-  
-    // Fade-in effect for each .journey-item when it comes into view
-    gsap.utils.toArray(".journey-item").forEach((item) => {
-      gsap.from(item, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          toggleActions: "play none none reverse"
-        }
-      });
     });
   });
+});

@@ -193,18 +193,12 @@
       justify-content: center;
     }
 
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
+    body, html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .business-journey {
-  height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -212,12 +206,13 @@ body, html {
 .container-fluid {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Horizontal scrolling container */
 .horizontal-scroll {
   display: flex;
-  width: 300vw; /* 3 slides, each taking 100vw */
+  width: calc(100vw * 3); /* 3 slides, each taking 100vw */
 }
 
 .horizontal-scroll .journey-item {
@@ -228,14 +223,19 @@ body, html {
   justify-content: center;
   text-align: center;
   font-size: 2rem;
-  color: #fff;
+  color: #000;
 }
 
 /* Vertical scrolling container */
+.vertical-scroll-container {
+  position: relative;
+  height: 300vh; /* 3 slides, each taking 100vh */
+}
+
 .vertical-scroll {
   display: flex;
   flex-direction: column;
-  height: 300vh; /* 3 slides, each taking 100vh */
+  height: 300vh;
 }
 
 .vertical-scroll .journey-item {
@@ -246,25 +246,16 @@ body, html {
   justify-content: center;
   text-align: center;
   font-size: 2rem;
-  color: #fff;
+  color: #000;
 }
 
-/* Footer styling */
-/* footer {
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-} */
-
 /* Optional colors for different slides */
-.horizontal-scroll .journey-item:nth-child(1) { background-color: #3498db; }
-.horizontal-scroll .journey-item:nth-child(2) { background-color: #e74c3c; }
-.horizontal-scroll .journey-item:nth-child(3) { background-color: #f1c40f; }
-.vertical-scroll .journey-item:nth-child(1) { background-color: #9b59b6; }
-.vertical-scroll .journey-item:nth-child(2) { background-color: #2ecc71; }
-.vertical-scroll .journey-item:nth-child(3) { background-color: #34495e; }
-   
+.horizontal-scroll .journey-item:nth-child(1) { background-color: #fff; }
+.horizontal-scroll .journey-item:nth-child(2) { background-color: #fff; }
+.horizontal-scroll .journey-item:nth-child(3) { background-color: #fff; }
+.vertical-scroll .journey-item:nth-child(1) { background-color: #fff; }
+.vertical-scroll .journey-item:nth-child(2) { background-color: #ffff; }
+.vertical-scroll .journey-item:nth-child(3) { background-color: #fff; }
     </style>
 </head>
 <body>
@@ -344,7 +335,7 @@ body, html {
                  <div class="col-md-2 d-flex" style="margin-left: auto;">
                     <img  src="assets/img/aboutusSC.png" alt="GIF Image" class="img-fluid">
                   </div>
-                  <img src="assets/img/1.png" alt="GIF Image" class="img-fluid">
+                  <img src="assets/img/about.png" alt="GIF Image" class="img-fluid">
         
                   </div>
                    
@@ -389,7 +380,7 @@ body, html {
                         
                         <h3><i class="bi bi-circle-fill" style="color: #FF9F7C;"></i> Vision</h3>
                         <p>
-                            Empowering Businesses To Achieve Excellence And Sustainable Growth.
+                            Empowering businesses to achieve excellence and sustainable growth.
         
                         </p>
                     </div>
@@ -755,32 +746,87 @@ body, html {
     <div class="container-fluid">
       <!-- Horizontal scrolling divs -->
       <div class="horizontal-scroll">
-        <div class="journey-item"> <!-- Div 1 -->
-          <h3>Milestone 1</h3>
-          <p>Details about the first milestone.</p>
+        <div class="container-fluid journey-item"> 
+          
+          <div class="row justify-content-center">
+            <div class="col-6" style=" border-top: #000 2px solid;" >
+              <h2 class="bi-circle-fill" style=""></h2>
+              <h3>FOUNDATION  <span style="color: #638181;">2004</span> </h3>
+              <p>The launch of the company marks the beginning of an exciting journey, introducing innovative products and services to the market. It represents a culmination of hard work, vision, and commitment to excellence, aiming to make a significant impact in the industry and provide exceptional value to customers.
+              </p>
+            </div>
+            <div class="col-6" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
+              <h3>INITIATION <span style="color: #638181;">2005</span> </h3>
+              <p>The execution of the largest development project in the Middle East, North Africa, and Saudi Arabia aims to transform the region with state-of-the-art infrastructure, economic growth, and enhanced quality of life. This ambitious initiative will set new standards for development and progress in the area.
+              </p>
+            </div>
+          
+         </div>
+        
+        
         </div>
-        <div class="journey-item"> <!-- Div 2 -->
-          <h3>Milestone 2</h3>
-          <p>Details about the second milestone.</p>
+
+
+
+
+        <div class="container-fluid journey-item"> <!-- Div 2 -->
+          <div class="row justify-content-center">
+            <div class="col-4" style=" border-top: #000 2px solid;" >
+              <h2 class="bi-circle-fill" style=""></h2>
+              <h3>EXPANSİON <span style="color: #638181;">2008</span> </h3>
+              <p>The company’s expansion into the GCC countries, including Saudi Arabia, the United Arab Emirates, Kuwait, and Oman, marks a significant milestone in its growth strategy. This move aims to strengthen its regional presence, enhance market reach, and provide tailored solutions to meet the diverse needs of these dynamic markets.
+              </p>
+            </div>
+            <div class=" col-4" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
+              <h3>COLLABORATİON <span style="color: #638181;">2010</span> </h3>
+              <p>The launch of collaboration and partnerships with regional and global universities and research institutes signifies a strategic initiative to drive innovation and knowledge exchange. This effort aims to enhance research capabilities, foster academic-industry linkages, and contribute to groundbreaking advancements across various fields.
+              </p>
+            </div>
+            <div class="col-4" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
+              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
+              <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
+              </p>
+            </div>
+          
+         </div>
         </div>
-        <div class="journey-item"> <!-- Div 3 -->
-          <h3>Milestone 3</h3>
-          <p>Details about the third milestone.</p>
+        <div class="container-fluid journey-item"> <!-- Div 3 -->
+          <div class="row justify-content-center">
+            <div class="col-6" style=" border-top: #000 2px solid;" >
+              <h2 class="bi-circle-fill" style=""></h2>
+              <h3>FOUNDATION  <span style="color: #638181;">2004</span> </h3>
+              <p>The launch of the company marks the beginning of an exciting journey, introducing innovative products and services to the market. It represents a culmination of hard work, vision, and commitment to excellence, aiming to make a significant impact in the industry and provide exceptional value to customers.
+              </p>
+            </div>
+            <div class="col-6" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
+              <h3>INITIATION <span style="color: #638181;">2005</span> </h3>
+              <p>The execution of the largest development project in the Middle East, North Africa, and Saudi Arabia aims to transform the region with state-of-the-art infrastructure, economic growth, and enhanced quality of life. This ambitious initiative will set new standards for development and progress in the area.
+              </p>
+            </div>
+           
+          
+         </div>
         </div>
       </div>
-      <!-- Vertical scrolling divs -->
-      <div class="vertical-scroll">
-        <div class="journey-item"> <!-- Div 4 -->
-          <h3>Milestone 4</h3>
-          <p>Details about the fourth milestone.</p>
-        </div>
-        <div class="journey-item"> <!-- Div 5 -->
-          <h3>Milestone 5</h3>
-          <p>Details about the fifth milestone.</p>
-        </div>
-        <div class="journey-item"> <!-- Div 6 -->
-          <h3>Milestone 6</h3>
-          <p>Details about the sixth milestone.</p>
+      <!-- Vertical scrolling container -->
+      <div class="vertical-scroll-container">
+        <div class="vertical-scroll">
+          <div class="journey-item"> <!-- Div 4 -->
+            <h3>Milestone 4</h3>
+            <p>Details about the fourth milestone.</p>
+          </div>
+          <div class="journey-item"> <!-- Div 5 -->
+            <h3>Milestone 5</h3>
+            <p>Details about the fifth milestone.</p>
+          </div>
+          <div class="journey-item"> <!-- Div 6 -->
+            <h3>Milestone 6</h3>
+            <p>Details about the sixth milestone.</p>
+          </div>
         </div>
       </div>
     </div>
