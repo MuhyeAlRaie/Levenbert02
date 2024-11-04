@@ -68,6 +68,76 @@
     }
 }
 
+.bg-image {
+            background-image: url('./assets/img/claim06.png'); /* Replace with your image URL */
+            background-color: #FF9F7C;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh; /* Adjust height as needed */
+            width:99vw;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:#ff9f7c00; /* Dark overlay */
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2; /* Ensure content is above the overlay */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .last-colmm{
+          padding-top: 250px;
+          color:#fff ;
+          
+        }
+
+        .last-cont {
+          
+          padding-left: 50px;
+          font-size: 2.5rem;
+          border-left: 3px #638181 solid;
+        }
+        .last-cont span {
+
+          font-size: 3rem;
+        }
+
+       /* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bg-image{
+      
+      height: 50vh;
+    }
+    .last-colmm{
+
+      padding-top: 50px;
+    }
+    .last-cont{
+      padding-left: 10px;
+font-size: 1rem;
+    }
+    .last-cont span {
+
+font-size: 1.5rem;
+}
+}
+
+@media (max-width: 1024px) {
+    .bg-image{
+      background-position: left;
+      height: 50vh;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -128,7 +198,7 @@
     <main class="overlay-dots">
         <section class="page-title-section">
             <div class="page-title-overlay d-flex align-items-center justify-content-center">
-                <h1 class="page-title">Business Lines</h1>
+                <h1 class="page-title">Business Streams</h1>
             </div>
         </section>
 
@@ -176,6 +246,22 @@
         </div>
   
       </section><!-- /Service Details Section -->
+
+      <section class="container-fluid bg-image">
+        <div class=" overlay"></div>
+         <div class="row py-4">
+          <div class="col-6">
+      
+      
+          </div>
+          <div class="col-6 last-colmm justify-content-center" >
+            <h2 class="last-cont" >Driving success through  <br>diverse <span style="color: #638181; ">Expertise</span>. 
+            </h2>
+          </div>
+            
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Main Content End -->
 
