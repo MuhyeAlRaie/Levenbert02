@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Smooth horizontal scroll effect for the first three divs (horizontal slides)
   gsap.to(".horizontal-scroll", {
-    xPercent: -40* (document.querySelectorAll(".horizontal-scroll .journey-item").length - 1),
+    xPercent: -30* (document.querySelectorAll(".horizontal-scroll .journey-item").length - 1),
     ease: "power1.inOut", // Smooth easing
     scrollTrigger: {
       trigger: ".horizontal-scroll",
       start: "top top",
-      end: "+=600vw", // Adjusted for three slides in horizontal scrolling
+      end: "+=800vw", // Adjusted for three slides in horizontal scrolling
       pin: true,
       scrub: 0.3, // Reduced scrub value for smoothness
     }
