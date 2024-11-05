@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
   gsap.utils.toArray(".journey-item").forEach((item) => {
     gsap.from(item, {
       opacity: 0,
-      y: 100,
+      y: 150,
       duration: 1.2, // Slightly increased duration for smooth fade-in
       ease: "power1.out", // Smooth fade-in easing
       scrollTrigger: {
