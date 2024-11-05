@@ -27,29 +27,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Smooth horizontal scroll effect for the first three divs (horizontal slides)
   gsap.to(".horizontal-scroll", {
-    xPercent: -34* (document.querySelectorAll(".horizontal-scroll .journey-item").length - 1),
+    xPercent: -40* (document.querySelectorAll(".horizontal-scroll .journey-item").length - 1),
     ease: "power1.inOut", // Smooth easing
     scrollTrigger: {
       trigger: ".horizontal-scroll",
       start: "top top",
-      end: "+=334vw", // Adjusted for three slides in horizontal scrolling
+      end: "+=600vw", // Adjusted for three slides in horizontal scrolling
       pin: true,
       scrub: 0.3, // Reduced scrub value for smoothness
     }
   });
 
-  // Smooth vertical scroll effect for the last three divs (vertical slides)
-  gsap.to(".vertical-scroll", {
-    yPercent: -5 * (document.querySelectorAll(".vertical-scroll .journey-item").length - 1),
-    ease: "power1.inOut", // Smooth easing
-    scrollTrigger: {
-      trigger: ".vertical-scroll-container",
-      start: "top top",
-      end: "+=300vh", // Adjusted for three slides in vertical scrolling
-      pin: true,
-      scrub: 0.5, // Reduced scrub value for smoothness
-    }
-  });
+  
 
   // Fade-in effect for each .journey-item with smooth transition when it comes into view
   gsap.utils.toArray(".journey-item").forEach((item) => {

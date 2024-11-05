@@ -223,7 +223,7 @@
 /* Horizontal scrolling container */
 .horizontal-scroll {
   display: flex;
-  width: calc(100vw * 3); /* 3 slides, each taking 100vw */
+  width: calc(100vw * 6); /* 3 slides, each taking 100vw */
 }
 
 .horizontal-scroll .journey-item {
@@ -254,54 +254,16 @@ padding-right: 125px;
 
 }
 
-/* Vertical scrolling container */
-.vertical-scroll-container {
-  position: relative;
-  height: 300vh; /* 3 slides, each taking 100vh */
-}
 
-.vertical-scroll {
-  display: flex;
-  flex-direction: column;
-  height: 300vh;
-}
-
-.vertical-scroll .journey-item {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 2rem;
-  color: #000;
-}
-
-.vertical-scroll .journey-item p {
-
-  padding-left: 125px;
-  padding-right: 125px;
-}
-
-@media (max-width: 768px) {
-
-  .vertical-scroll .journey-item p {
-
-padding-left: 0;
-padding-right: 0;
-}
-.vertical-scroll .journey-item h3 {
-  font-size: 0.9rem;
-}
-}
 
 /* Optional colors for different slides */
 .horizontal-scroll .journey-item:nth-child(1) { background-color: transparent; }
 .horizontal-scroll .journey-item:nth-child(2) { background-color: transparent; }
 .horizontal-scroll .journey-item:nth-child(3) { background-color: transparent; }
-.vertical-scroll .journey-item:nth-child(1) { background-color: transparent; }
-.vertical-scroll .journey-item:nth-child(2) { background-color: transparent; }
-.vertical-scroll .journey-item:nth-child(3) { background-color: transparent; }
+.horizontal-scroll .journey-item:nth-child(4) { background-color: transparent; }
+.horizontal-scroll .journey-item:nth-child(5) { background-color: transparent; }
+.horizontal-scroll .journey-item:nth-child(6) { background-color: transparent; }
+
     </style>
 </head>
 <body>
@@ -793,6 +755,7 @@ padding-right: 0;
 
   <section class="business-journey">
     <div class="container-fluid">
+      <h2 class="text-center my-5" style="font-size: 3rem;"><span style="color: #BFCDCD;">LEVENBERT</span>  Journey</h2>
       <!-- Horizontal scrolling divs -->
       <div class="horizontal-scroll">
         <div class="container-fluid journey-item"> 
@@ -850,7 +813,7 @@ padding-right: 0;
               <p>The company’s global awards underscore its commitment to excellence and innovation, recognizing its impactful, high-quality projects on an international scale
               </p>
             </div>
-            <div class="col-6" style="border-top: #000 2px solid; border-right: #000 2px solid;">
+            <div class="col-6" style="border-top: #000 2px solid;">
               <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
               <h3>CONSTANCY <span style="color: #638181;">2014</span></h3>
               <p>Saudi Arabia's largest aviation development project is a groundbreaking initiative to transform the country's aviation infrastructure, raising industry standards, boosting efficiency, and driving economic growth
@@ -860,26 +823,84 @@ padding-right: 0;
           
          </div>
         </div>
+
+        <div class="container-fluid journey-item"> <!-- Div 4 -->
+          <div class="row justify-content-center">
+            <div class="col-6" style=" border-top: #000 2px solid;" >
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>SUSTAİNABLE <span style="color: #638181;">2015</span></h3>
+              <p>The launch of advanced leadership programs in the UAE aims to build top-tier leadership skills, drive organizational excellence, and equip leaders to navigate complex business landscapes for sustainable growth.
+              </p>
+            </div>
+            <div class=" col-6" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>GROWTH <span style="color: #638181;">2017</span> </h3>
+              <p>Collaborations with regional and global management institutes aim to boost leadership capabilities, foster knowledge exchange, and drive innovative strategies to enhance our global performance.
+              </p>
+            </div>
+            <!-- <div class="col-4" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
+              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
+              <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
+              </p>
+            </div> -->
+          
+         </div>
+        </div>
+        <div class="container-fluid journey-item"> <!-- Div 5 -->
+          <div class="row justify-content-center">
+            <div class="col-6" style=" border-top: #000 2px solid;" >
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>DOMINANCE <span style="color: #638181;">2018</span></h3>
+              <p>Oman's Vision 2040 project is a transformative initiative focused on sustainable development, economic diversification, and societal progress, setting a roadmap for growth and prosperity over the next two decades.
+              </p>
+            </div>
+            <div class=" col-6" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>Excellence <span style="color: #638181;">2019</span> </h3>
+              <p>The launch of specialized centers in the Middle East, North Africa, and Singapore marks a major expansion of our global footprint, driving innovation, enhancing regional capabilities, and fostering international collaboration.
+              </p>
+            </div>
+            <!-- <div class="col-4" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
+              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
+              <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
+              </p>
+            </div> -->
+          
+         </div>
+        </div>
+        <div class="container-fluid journey-item"> <!-- Div 6 -->
+          <div class="row justify-content-center">
+            <div class="col-4" style=" border-top: #000 2px solid;" >
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>REALIZATION <span style="color: #638181;">2020</span></h3>
+              <p>The electronic project launched in response to COVID-19 leverages technology for communication, education, and research, aiming to raise public awareness and drive essential scientific advancements.
+              </p>
+            </div>
+            <div class=" col-4" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>RESILIENCE <span style="color: #638181;">2021</span> </h3>
+              <p>Expanding operations in Saudi Arabia and repositioning globally, the company aims to leverage investment opportunities aligned with Vision 2030, enhancing both local impact and global presence.
+              </p>
+            </div>
+            <div class="col-4" style="border-top: #000 2px solid;">
+              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
+              <h3>INITIATIVE <span style="color: #638181;">2024</span> </h3>
+              <p>The launch of globally accredited initiatives and specialized programs, along with expansion and partnerships, drives innovation and excellence, enabling high-quality solutions and expanded market reach.
+              </p>
+            </div>
+          
+         </div>
+        </div>
+
+
+
+
+
+
       </div>
-       <!-- Vertical scrolling container -->
-    <div class="vertical-scroll-container">
-      <div class="vertical-scroll">
-        <div class="journey-item"> <!-- Div 4 -->
-          <h3>Milestone 4</h3>
-          <p>Details about the fourth milestone.</p>
-        </div>
-        <div class="journey-item"> <!-- Div 5 -->
-          <h3>Milestone 5</h3>
-          <p>Details about the fifth milestone.</p>
-        </div>
-        <div class="journey-item"> <!-- Div 6 -->
-          <h3>Milestone 6</h3>
-          <p>Details about the sixth milestone.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
+     
   
 
        
