@@ -13,8 +13,11 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script> -->
 
     <style>
 
@@ -220,49 +223,258 @@
   min-height: 100vh;
 }
 
-/* Horizontal scrolling container */
-.horizontal-scroll {
-  display: flex;
-  width: calc(100vw * 6); /* 6 slides, each taking 100vw */
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+
+/* Colors */
+* {
+  outline: none;
 }
 
-.horizontal-scroll .journey-item {
-  width: 100vw;
-  height: 100vh;
+/* Timeline */
+.timeline-carousel {
+  margin: 0;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 86px 6.9444% 90px 6.9444%;
+  position: relative;
+  overflow: hidden;
+}
+.timeline-carousel:after,
+.timeline-carousel:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 6.9444%;
+  background-color: #fff;
+  z-index: 3;
+  width: 6.9444%;
+}
+.timeline-carousel:after {
+  left: 0;
+}
+.timeline-carousel:before {
+  right: 0;
+  opacity: 0;
+}
+.timeline-carousel .slick-list {
+  overflow: visible;
+}
+.timeline-carousel .slick-dots {
+  bottom: -73px;
+}
+.timeline-carousel h1 {
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 700;
+}
+.timeline-carousel p {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 300;
+}
+.timeline-carousel__image {
+  padding-right: 30px;
+}
+.flag-icon {
+  width: 100%; /* Adjust as needed */
+  height: auto;
+  max-width: 100px; /* Adjust size for layout */
+  object-fit: cover;
+  border-radius: 4px; /* Optional for rounded edges */
+  align-items: center;
+}
+.timeline-carousel__item {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.timeline-carousel__item .media-wrapper {
+  opacity: 0.4;
+  padding-bottom: 71.4%;
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.timeline-carousel__item:last-child .timeline-carousel__item-inner:after {
+  width: calc(100% - 30px);
+}
+.timeline-carousel__item-inner {
+  position: relative;
+  padding-top: 45px;
+}
+.timeline-carousel__item-inner:after {
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.timeline-carousel__item-inner .year {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  color: #638181;
+  display: table;
+  letter-spacing: -1px;
+  padding-right: 10px;
+  background-color: none;
+  z-index: 1;
+  position: relative;
+  margin: -15px 0 20px;
+  font-weight: 700;
+}
+.timeline-carousel__item-inner .year:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color:none;
+  z-index: 3;
+}
+.timeline-carousel__item-inner .month {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #638181;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.timeline-carousel__item-inner p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #2D435B;
+  width: 60%;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.timeline-carousel__item-inner .read-more {
+  font-size: 12px;
+  color: #638181;
+  display: table;
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+}
+.timeline-carousel__item-inner .read-more:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  border-bottom: 2px solid #638181;
+  transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.timeline-carousel__item-inner .read-more:hover:after {
+  width: 100%;
+}
+.timeline-carousel__item-inner .pointer {
+  height: 29px;
+  position: relative;
+  z-index: 1;
+  margin: -4px 0 16px;
+}
+.timeline-carousel__item-inner .pointer:after {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  background-color: #638181;
+}
+.timeline-carousel__item-inner .pointer:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 4px;
+  background-color: #638181;
+}
+.timeline-carousel .slick-active .media-wrapper {
+  opacity: 1 !important;
+}
+
+/* Slick dots */
+.slick-dots {
+  bottom: 160px;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 2;
+}
+.slick-dots li {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  display: inline-block;
+  margin: 0 6px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+.slick-dots li.slick-active button {
+  background: #638181;
+  border-color: #638181;
+}
+.slick-dots li button {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.slick-dots li button:hover {
+  background: #638181;
+  border-color: #638181;
+}
+
+/* Link */
+.link {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  z-index: 9999;
+}
+.link a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 2rem;
-  color: #000;
+  text-decoration: none;
+  color: #fff;
+}
+.link .fa {
+  font-size: 28px;
+  margin-right: 8px;
+  color: #fff;
 }
 
-.horizontal-scroll .journey-item p {
-padding-left: 125px;
-padding-right: 125px;
-}
-
-@media (max-width: 768px) {
-  .horizontal-scroll .journey-item h3 {
-
-    font-size: 0.9rem;
-  }
-  .horizontal-scroll .journey-item p {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-}
-
-
-
-/* Optional colors for different slides */
-.horizontal-scroll .journey-item:nth-child(1) { background-color: transparent; }
-.horizontal-scroll .journey-item:nth-child(2) { background-color: transparent; }
-.horizontal-scroll .journey-item:nth-child(3) { background-color: transparent; }
-.horizontal-scroll .journey-item:nth-child(4) { background-color: transparent; }
-.horizontal-scroll .journey-item:nth-child(5) { background-color: transparent; }
-.horizontal-scroll .journey-item:nth-child(6) { background-color: transparent; }
+/* .slick-prev,
+.slick-next svg {
+  height: auto;
+  width: 18px;
+  padding-bottom: 2px;
+} */
 
     </style>
 </head>
@@ -753,153 +965,191 @@ padding-right: 125px;
   </section>
 
 
-  <section class="business-journey">
-    <div class="container-fluid">
-      <h2 class="text-center my-5" style="font-size: 3rem;"><span style="color: #BFCDCD;">LEVENBERT</span>  Journey</h2>
-      <!-- Horizontal scrolling divs -->
-      <div class="horizontal-scroll">
-        <div class="container-fluid journey-item"> 
-          
-          <div class="row justify-content-center">
-            <div class="col-6" style=" border-top: #000 2px solid; " >
-              <h2 class="bi-circle-fill" style="font-size: 5rem; position: relative; top: -40px;"></h2>
-              <h3>FOUNDATION <span style="color: #638181;">2004</span> </h3>
-              <p>With its launch, the company embarks on an exciting journey to bring innovative products and services to the market, driven by a commitment to excellence and customer value.
-              </p>
+  <section class="timeline-carousel content-wrapper">
+    <div class="container ">
+       <div class="row">
+          <div class="col-8 offset-2 text-center mb-5">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="lead text-muted" >Our commitment to excellence is demonstrated by the success stories of our clients across diverse industries and the completion of numerous high-impact mega projects. We are honored to partner with leading corporations and government entities, collaborating to achieve innovation and measurable progress. Through tailored solutions, we empower clients to overcome complex challenges, optimize operations, and unlock the potential to achieve meaningful progress.</p> 
+          </div>
+       </div>
+    </div>
+    <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/SA-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">Riyadh Municipality </span>
+             <span class="month">2011-2012</span>
+             <p>We developed a comprehensive long-term strategic plan for Riyadh Municipality, focusing on sustainable growth and aligning with the city's future vision and objectives.
+            </p>
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/Om-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">Supreme Council for Planning</span>
+             <span class="month">2017 – 2019</span>
+             <p>We offer technical support services to aid in the formulation of Oman Vision 2040. Our expertise ensures that the vision's strategic goals and initiatives are effectively developed and implemented, fostering sustainable growth and development for Oman.</p>
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/SA-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">Ministry of Health</span>
+             <span class="month">2012-2014</span>
+             <p>We developed a comprehensive brand and identity for an e-health initiative, aiming to establish a strong, recognizable presence in the digital health sector. This effort focused on creating a cohesive and engaging brand that reflects the innovative and patient-centric nature of the e-health services.</p>
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/SA-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">Saudi Telecom Company – STC </span>
+             <span class="month">2004-2009</span>
+             <p>We implemented the Forward Strategy, a five-year customer-centric transformation plan, encompassing change management and training for 8,500 staff members. This initiative aimed to enhance customer focus and operational efficiency across the organization.</p>
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/Om-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+            <span class="year">Diwan of Royal Court</span>
+             <span class="month">2018 – 2019</span>
+             <p>We provide consulting services to establish the Project Management Office (PMO) for National Programs. Our expertise ensures the effective setup and management of the PMO, enabling the successful execution and oversight of key national initiatives.</p>
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/Kw-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">Kuwait Telecommunications Company – VIVA</span>
+             <span class="month">2009</span>
+             <p>We managed the recruitment, selection, and orientation process for new hires at VIVA, ensuring they are well-prepared and integrated into the company's culture and operations effectively.</p>
+            
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/AE-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">General Directorate for Residencies <br>and Foreigners Affairs </span>
+             <span class="month">2015 – 2018</span>
+             <p>We developed a leadership project for the top-ranking 350 officers of the GDRFA, including the Director General, Deputies, Managers, and Division Heads. This initiative aimed to enhance their leadership skills and ensure effective management across all levels of the organization.</p>
+             
+          </div>
+       </div>
+       <!--/Timeline item-->
+       
+       <!--Timeline item-->
+       <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+            <img src="assets/img/SA-flag.png" alt="US Flag" class="flag-icon">
+          </div>
+          <div class="timeline-carousel__item-inner">
+             <span class="year">Saudi Ground Services Company </span>
+             <span class="month">2014</span>
+             <p>We developed and re-engineered customer service processes and trained 500 managers and supervisors at the leading four international airports in KSA (Riyadh, Jeddah, Madinah, and Dammam). These efforts aimed to enhance service quality and operational efficiency in these key transportation hubs.</p>
+          </div>
+       </div>
+       <!--/Timeline item-->
+
+          <!--Timeline item-->
+          <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+              <img src="assets/img/SA-flag.png" alt="US Flag" class="flag-icon">
             </div>
-            <div class="col-6" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>INITIATION <span style="color: #638181;">2005</span> </h3>
-              <p>The largest development project in the Middle East and North Africa aims to transform the region with cutting-edge infrastructure, economic growth, and improved quality of life, setting new standards for progress.
-              </p>
+            <div class="timeline-carousel__item-inner">
+               <span class="year">General Authority of Civil Aviation</span>
+               <span class="month">2012</span>
+               <p>We conducted a benchmarking study for 11 airlines focused on customer satisfaction. This study aimed to compare and analyze customer service performance across these airlines, identifying strengths and areas for improvement to enhance overall passenger experience.</p>
+               
             </div>
-          
          </div>
-        
-        
-        </div>
+         <!--/Timeline item-->
 
-
-
-
-        <div class="container-fluid journey-item"> <!-- Div 2 -->
-          <div class="row justify-content-center">
-            <div class="col-6" style=" border-top: #000 2px solid;" >
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #638181;position: relative; top: -40px;"></h2>
-              <h3>EXPANSİON <span style="color: #638181;">2008</span></h3>
-              <p>The company’s expansion into Saudi Arabia, UAE, Kuwait, and Oman strengthens its regional presence and market reach, offering tailored solutions for these dynamic markets.
-              </p>
+           <!--Timeline item-->
+           <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+              <img src="assets/img/Om-flag.png" alt="US Flag" class="flag-icon">
             </div>
-            <div class=" col-6" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>COLLABORATİON <span style="color: #638181;">2010</span> </h3>
-              <p>Partnering with regional and global universities and research institutes, this initiative drives innovation, strengthens research, and fosters academic-industry collaboration for groundbreaking advancements.
-              </p>
+            <div class="timeline-carousel__item-inner">
+               <span class="year">Institute of Public Administration</span>
+               <span class="month">2017</span>
+               <p>We formulated a comprehensive corporate strategy for IPA, known as IPA 2020. This strategy aimed to guide the organization's growth and development, aligning its goals and initiatives to achieve long-term success.</p>
             </div>
-            <!-- <div class="col-4" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
-              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
-              <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
-              </p>
-            </div> -->
-          
          </div>
-        </div>
-        <div class="container-fluid journey-item"> <!-- Div 3 -->
-          <div class="row justify-content-center">
-            <div class="col-6" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #BFCDCD;position: relative; top: -40px;"></h2>
-              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
-              <p>The company’s global awards underscore its commitment to excellence and innovation, recognizing its impactful, high-quality projects on an international scale
-              </p>
+         <!--/Timeline item-->
+
+           <!--Timeline item-->
+           <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+              <img src="assets/img/AE-flag.png" alt="US Flag" class="flag-icon">
             </div>
-            <div class="col-6" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>CONSTANCY <span style="color: #638181;">2014</span></h3>
-              <p>Saudi Arabia's largest aviation development project is a groundbreaking initiative to transform the country's aviation infrastructure, raising industry standards, boosting efficiency, and driving economic growth
-              </p>
+            <div class="timeline-carousel__item-inner">
+               <span class="year">Dubai Municipality</span>
+               <span class="month">2012-2018</span>
+               <p>We developed customer service strategies and programs tailored for leadership levels, as well as strategies specifically designed for touchpoints. These initiatives aimed to enhance overall customer service effectiveness and ensure a consistent, high-quality experience across all customer interactions.</p>
             </div>
-           
-          
          </div>
-        </div>
+         <!--/Timeline item-->
 
-        <div class="container-fluid journey-item"> <!-- Div 4 -->
-          <div class="row justify-content-center">
-            <div class="col-6" style=" border-top: #000 2px solid;" >
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #638181;position: relative; top: -40px;"></h2>
-              <h3>SUSTAİNABLE <span style="color: #638181;">2015</span></h3>
-              <p>The launch of advanced leadership programs in the UAE aims to build top-tier leadership skills, drive organizational excellence, and equip leaders to navigate complex business landscapes for sustainable growth.
-              </p>
+           <!--Timeline item-->
+           <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+              <img src="assets/img/Om-flag.png" alt="US Flag" class="flag-icon">
             </div>
-            <div class=" col-6" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>GROWTH <span style="color: #638181;">2017</span> </h3>
-              <p>Collaborations with regional and global management institutes aim to boost leadership capabilities, foster knowledge exchange, and drive innovative strategies to enhance our global performance.
-              </p>
+            <div class="timeline-carousel__item-inner">
+               <span class="year">Diwan of Royal Court</span>
+               <span class="month">2013-2018</span>
+               <p>We provided institutional support for the establishment and operation of the "Institute of Capability Development" and its national programs. Our efforts ensured the institute's successful launch and the effective implementation of its programs, aimed at enhancing national capabilities.</p>
             </div>
-            <!-- <div class="col-4" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
-              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
-              <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
-              </p>
-            </div> -->
-          
          </div>
-        </div>
-        <div class="container-fluid journey-item"> <!-- Div 5 -->
-          <div class="row justify-content-center">
-            <div class="col-6" style=" border-top: #000 2px solid;" >
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>DOMINANCE <span style="color: #638181;">2018</span></h3>
-              <p>Oman's Vision 2040 project is a transformative initiative focused on sustainable development, economic diversification, and societal progress, setting a roadmap for growth and prosperity over the next two decades.
-              </p>
+         <!--/Timeline item-->
+
+           <!--Timeline item-->
+           <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+              <img src="assets/img/SA-flag.png" alt="US Flag" class="flag-icon">
             </div>
-            <div class=" col-6" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #BFCDCD;position: relative; top: -40px;"></h2>
-              <h3>Excellence <span style="color: #638181;">2019</span> </h3>
-              <p>The launch of specialized centers in the Middle East, North Africa, and Singapore marks a major expansion of our global footprint, driving innovation, enhancing regional capabilities, and fostering international collaboration.
-              </p>
+            <div class="timeline-carousel__item-inner">
+               <span class="year">Saudi Post Corporation</span>
+               <span class="month">2012-2013</span>
+               <p>We established the Office of Strategic Management to streamline strategic planning and execution. This office is dedicated to aligning organizational goals, monitoring performance, and ensuring the effective implementation of strategies to achieve long-term objectives.</p>
             </div>
-            <!-- <div class="col-4" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;"></h2>
-              <h3>COMPETENCE <span style="color: #638181;">2013</span> </h3>
-              <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
-              </p>
-            </div> -->
-          
          </div>
+         <!--/Timeline item-->
         </div>
-        <div class="container-fluid journey-item"> <!-- Div 6 -->
-          <div class="row justify-content-center">
-            <div class="col-4" style=" border-top: #000 2px solid;" >
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>REALIZATION <span style="color: #638181;">2020</span></h3>
-              <p>The electronic project launched in response to COVID-19 leverages technology for communication, education, and research, aiming to raise public awareness and drive essential scientific advancements.
-              </p>
-            </div>
-            <div class=" col-4" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #638181;position: relative; top: -40px;"></h2>
-              <h3>RESILIENCE <span style="color: #638181;">2021</span> </h3>
-              <p>Expanding operations in Saudi Arabia and repositioning globally, the company aims to leverage investment opportunities aligned with Vision 2030, enhancing both local impact and global presence.
-              </p>
-            </div>
-            <div class="col-4" style="border-top: #000 2px solid;">
-              <h2 class="bi-circle-fill" style="font-size: 5rem;color: #FF9F7C;position: relative; top: -40px;"></h2>
-              <h3>INITIATIVE <span style="color: #638181;">2024</span> </h3>
-              <p>The launch of globally accredited initiatives and specialized programs, along with expansion and partnerships, drives innovation and excellence, enabling high-quality solutions and expanded market reach.
-              </p>
-            </div>
-          
-         </div>
-        </div>
-
-
-
-
-
-
-      </div>
+      </section>
      
   
 
@@ -978,6 +1228,10 @@ padding-right: 125px;
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -987,6 +1241,39 @@ padding-right: 125px;
     <script>
         AOS.init();
     </script>
+
+<script>
+
+  $.js = function (el) {
+      return $('[data-js=' + el + ']')
+  };
+  
+  function carousel() {
+    $.js('timeline-carousel').slick({
+      infinite: false,
+      arrows: true,
+       arrows: false,
+      prevArrow: '<div class="slick-prev"> <div class="btn mr-3 btn-warning d-flex justify-content-center align-items-center"> <div>Previous</div><svg class="ml-1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"> <path d="M10.1,19.1l1.5-1.5L7,13h14.1v-2H7l4.6-4.6l-1.5-1.5L3,12L10.1,19.1z"/> </svg></div></div>',
+      nextArrow: '<div class="slick-next"> <div class="btn btn-warning d-flex justify-content-center align-items-center"> <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M 14 4.9296875 L 12.5 6.4296875 L 17.070312 11 L 3 11 L 3 13 L 17.070312 13 L 12.5 17.570312 L 14 19.070312 L 21.070312 12 L 14 4.9296875 z"/> </svg> <div>Next</div></div></div>',
+      dots: false,
+      autoplay: true,
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+    });
+  }
+  
+  carousel();
+  
+  </script>
 
     
     <script src="assets/js/main.js"></script>
