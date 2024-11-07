@@ -298,14 +298,14 @@ footer .text-center p {
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 4.0rem;
     font-weight: 700;
     color: #fff;
 }
 
 .hero-text {
     font-size: 1.25rem;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 
