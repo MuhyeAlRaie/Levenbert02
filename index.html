@@ -236,7 +236,7 @@ font-size: 1.5rem;
  /* Swiper Container Styling */
  .investment-swiper-container {
       width: 100%;
-      height: 70vh; /* Full screen height */
+      height: 100vh; /* Full screen height */
       position: relative;
       /* margin-left: 10%; */
       margin-top: 50px;
@@ -251,7 +251,7 @@ font-size: 1.5rem;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-color: #ffffff;
+      background-color: #638181;
     }
      /* Overlay Styling */
      #investment-slider .swiper-slide::before {
@@ -282,17 +282,22 @@ font-size: 1.5rem;
     }
 
     #investment-slider .container .btn {
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
-      align-items: left;
+      position: absolute;
+      bottom: -5;
+      right: 0;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-
+      padding: 24px;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
       color: #fff;
-      background-color: #638181;
+      background-color: #FF9F7C;
     }
     #investment-slider .container .btn:hover {
-    background-color:  #FF9F7C;
+    background-color:  #fff;
+    color: #333;
     
     }
 
@@ -308,19 +313,20 @@ font-size: 1.5rem;
       height: 500px;
       width: 800px;
       position: relative;
+      /* margin-top: 100px; */
       
 
     }
     #investment-slider .container .method {
 
-      margin-left: 100px;
+      margin-left: 100px; 
       margin-top: 100px;
     }
 
 
     #investment-slider .container p {
       font-size: 1.25rem;
-      color: #333;
+      color: #fff;
       /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); */
       padding: 0 15px;
       text-align: justify;
@@ -385,7 +391,7 @@ font-size: 1.5rem;
     left: 0; /* Align to left */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.211); /* Black with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
     z-index: 0; /* Above video */
 }
 #investment-slider .catalyst-logo {
@@ -678,7 +684,7 @@ font-size: 1.5rem;
             <!-- Slide 2 -->
             <div class="swiper-slide"  >
               <div class="container">
-                <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo-2">
+                <img src="assets/img/Catalyst-logo-white.png" alt="" class="catalyst-logo-2">
 
                 <div class="row">
               <div class="col-6">
@@ -697,21 +703,36 @@ font-size: 1.5rem;
               </div>
             </div>
             <!-- Slide 3 -->
-            <div class="swiper-slide" >
+            <div class="swiper-slide" style="background-color: #67B7B2;" >
+              <video autoplay muted loop>
+                <source src="assets/video/catalyst03.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="fact-overlay"></div> <!-- Overlay for the video -->
+              
               <div class="container">
-                <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo-2">
+                <img src="assets/img/Catalyst-logo-white.png" alt="" class="catalyst-logo-2">
 
                 <div class="row">
                   <div class="col-5">
-                    <p>A range of regulatory and facilitation methods have been identified to be adapted according to the scope of innovation and specific areas. These methods include:</p>
-                    <a class="btn" href="#">Learn more</a>
+                    <p>The " CATALYST" labs aim
+                      to achieve effectiveness
+                      and efficiency in the
+                      institutional innovation
+                      process and ensure the
+                      achievement of the desired
+                      outputs and outcomes
+                      that support the strategic
+                      development and efforts
+                      by working to achieve the
+                      your strategic  objectives.</p>
+
 
 
                   </div>
-                  <div class="col-6 method">
-                    <img src="assets/img/Catalyst-03.png" alt="" class="image-catalyst-method">
-                  </div>
+                 
                 </div>
+                <a class="btn" href="https://drive.google.com/file/d/1aAxKSMYnERE6pbDtfQix1OROKBWxLWKK/view?usp=sharing">Learn more</a>
 
               </div>
             </div>
