@@ -13,6 +13,10 @@
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
 
+    <!-- swiper -->
+     <!-- Swiper.js CSS -->
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+
     <!-- Slick CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -75,7 +79,7 @@
     margin-top: 10px;
 }
 
-.btn{
+.latest-news-section .btn{
     border: 3px solid;
     border-color: #FF9F7C ;
   border-radius: 50%;
@@ -225,6 +229,172 @@ font-size: 1.5rem;
       height: 50vh;
     }
 }
+/* .investment-slider {
+
+  margin-top: 100px;
+} */
+ /* Swiper Container Styling */
+ .investment-swiper-container {
+      width: 100%;
+      height: 70vh; /* Full screen height */
+      position: relative;
+      /* margin-left: 10%; */
+      margin-top: 50px;
+    }
+
+    #investment-slider .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      height: 100%; /* Ensure full height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #ffffff;
+    }
+     /* Overlay Styling */
+     #investment-slider .swiper-slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: rgba(0, 0, 0, 0.353); */
+       /* Black overlay with 50% opacity */
+      z-index: 1;
+    }
+
+    /* Text Styling */
+    #investment-slider .container h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+      text-align: justify;
+      border-bottom: #fff solid 2px;
+      padding-bottom: 5px;
+    }
+    #investment-slider .container h2 span {
+
+      color: #FF9F7C;
+    }
+
+    #investment-slider .container .btn {
+
+      color: #fff;
+      background-color: #638181;
+    }
+
+    #investment-slider .container .image-catalyst {
+      /* left: ; */
+      height: 500px;
+      width: 800px;
+
+    }
+
+    #investment-slider .container .image-catalyst-method {
+      /* left: ; */
+      height: 500px;
+      width: 800px;
+      position: relative;
+      
+
+    }
+    #investment-slider .container .method {
+
+      margin-left: 100px;
+      margin-top: 100px;
+    }
+
+
+    #investment-slider .container p {
+      font-size: 1.25rem;
+      color: #333;
+      /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); */
+      padding: 0 15px;
+      text-align: justify;
+      margin-top: 150px;
+
+    }
+    #investment-slider .container  {
+    position: relative; /* To position content above overlay */
+    z-index: 2;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #investment-slider  .container h2 {
+        font-size: 2rem;
+      }
+
+      #investment-slider  .container p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #investment-slider .container h2 {
+        font-size: 1.5rem;
+      }
+
+      #investment-slider .container p {
+        font-size: 0.9rem;
+        
+      }
+    }
+
+    /* Navigation and Pagination Styling */
+    #investment-slider .swiper-button-next,
+    #investment-slider .swiper-button-prev {
+      color: #fff;
+    }
+
+    #investment-slider .swiper-pagination-bullet {
+      background-color: #FF9F7C;
+      opacity: 0.7;
+    }
+
+    #investment-slider .swiper-pagination-bullet-active {
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+    #investment-slider  video {
+    position: absolute; /* Position the video absolutely */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire section */
+    z-index: 0; /* Behind the content */
+}
+#investment-slider .fact-overlay {
+    position: absolute; /* Positioning for overlay */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.211); /* Black with 50% opacity */
+    z-index: 0; /* Above video */
+}
+#investment-slider .catalyst-logo {
+  position: absolute;
+  left: 0;
+  bottom: 180px;
+  margin-top: 0;
+  height: 100px;
+  width: auto;
+}
+#investment-slider .catalyst-logo-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  height: 100px;
+  width: auto;
+}
     </style>
 </head>
 <body>
@@ -372,7 +542,7 @@ font-size: 1.5rem;
 <section class="expertise-section overlay-dots">
          <!-- Flipped Circles Grid -->
   <div class="container" >
-    <h2 class="section-title" style="padding: 50px 0 ;"><span style="color: #BFCDCD;">LEVENBERT's</span>  BUSINESSES</h2>
+    <h2 class="section-title" style="padding: 50px 0 ;"><span style="color: #BFCDCD;">LEVENBERT</span>  BUSINESSES</h2>
     <p style="text-align: center; margin-bottom: 40px;"> Our integrated strategic solutions empower organizations to excel in dynamic environments through tailored business approaches. With expertise in operational efficiency, strategic planning, and innovative practices, we deliver measurable impact and long-term value at every stage of your journey.</p>
     <div class="row">
       <!-- Circle 1 to 14 -->
@@ -475,11 +645,75 @@ font-size: 1.5rem;
 
 
    <!-- Call to Action with Background Image -->
-<section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home02.jpg'); height: 250px;">
+<!-- <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home02.jpg'); height: 250px;">
   <div class="container">
       <h2 data-aos="fade-up" class="animated">⁠Delivering Insight, <Span style="color: #FF9F7C;">Driving Excellence</Span>.</h2>
     </div>
-</section>
+</section> -->
+
+      <!-- Investment Slider Section -->
+      <section id="investment-slider">
+        <div class="investment-swiper-container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <video autoplay muted loop>
+                <source src="assets/video/catalyst.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="fact-overlay"></div> <!-- Overlay for the video -->
+              <div class="container">
+               <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo">
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide"  >
+              <div class="container">
+                <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo-2">
+
+                <div class="row">
+              <div class="col-6">
+               
+               <p>Innovation laboratories are essential to generating innovative solutions, solving problems, and developing strategic initiatives. Their implementation varies globally, impacting the quality of outcomes. To support ongoing development, we have created "CATALYST", an advanced methodology for managing innovation labs and workshops, designed using the most effective international practices.</p>
+                <!-- <a class="btn" href="#">Learn more</a> -->
+                </div>
+                <div class="col-6 ">
+                 <img src="assets/img/Catalyst-02.png" alt="" class="image-catalyst">
+                </div>
+
+                </div>
+              
+                
+
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide" >
+              <div class="container">
+                <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo-2">
+
+                <div class="row">
+                  <div class="col-5">
+                    <p>A range of regulatory and facilitation methods have been identified to be adapted based on scope of innovation and areas. Methods includes:</p>
+
+
+                  </div>
+                  <div class="col-6 method">
+                    <img src="assets/img/Catalyst-03.png" alt="" class="image-catalyst-method">
+                    <!-- <a class="btn" href="#">Learn more</a> -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Add more slides as needed -->
+          </div>
+      
+          <!-- Pagination and Navigation -->
+          <div class="swiper-pagination"></div>
+      
+        </div>
+      </section>
 
 
 
@@ -678,7 +912,8 @@ font-size: 1.5rem;
 
     <!-- slick js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
+<!-- Swiper.js JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
     <script>
        AOS.init({
@@ -767,6 +1002,24 @@ font-size: 1.5rem;
               }
           ]
       });
+  });
+</script>
+<script>
+  var investmentSwiper = new Swiper('.investment-swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 10000, // Change slide every 5 seconds
+      disableOnInteraction: false, // Keeps autoplay running even after interaction
+    },
+    effect: 'fade', // Smooth fade effect
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // Allow clicks on pagination bullets
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 </script>
 
