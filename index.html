@@ -282,9 +282,18 @@ font-size: 1.5rem;
     }
 
     #investment-slider .container .btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      text-align: center;
 
       color: #fff;
       background-color: #638181;
+    }
+    #investment-slider .container .btn:hover {
+    background-color:  #FF9F7C;
+    
     }
 
     #investment-slider .container .image-catalyst {
@@ -694,13 +703,13 @@ font-size: 1.5rem;
 
                 <div class="row">
                   <div class="col-5">
-                    <p>A range of regulatory and facilitation methods have been identified to be adapted based on scope of innovation and areas. Methods includes:</p>
+                    <p>A range of regulatory and facilitation methods have been identified to be adapted according to the scope of innovation and specific areas. These methods include:</p>
+                    <a class="btn" href="#">Learn more</a>
 
 
                   </div>
                   <div class="col-6 method">
                     <img src="assets/img/Catalyst-03.png" alt="" class="image-catalyst-method">
-                    <!-- <a class="btn" href="#">Learn more</a> -->
                   </div>
                 </div>
 
@@ -1011,7 +1020,7 @@ font-size: 1.5rem;
       delay: 10000, // Change slide every 5 seconds
       disableOnInteraction: false, // Keeps autoplay running even after interaction
     },
-    effect: 'fade', // Smooth fade effect
+    effect: 'slide', // Smooth fade effect
     pagination: {
       el: '.swiper-pagination',
       clickable: true, // Allow clicks on pagination bullets
