@@ -476,8 +476,8 @@ font-size: 1.5rem;
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6" data-aos="fade-right">
-                            <h1 class="hero-title">Futuristic<br> Architecture <span class="bi-circle-fill" style="color: #FF9F7C;font-size: 1.5rem;"></span></h1>
-                            <p class="hero-text">Driving transformation through strategic insights and innovative solutions.</p>
+                            <h1 class="hero-title ">Futuristic<br> Architecture <span class="bi-circle-fill" style="color: #FF9F7C;font-size: 1.5rem;"></span></h1>
+                            <p class="hero-text animated-paragraph"><span id="changing-text">Driving transformation through strategic insights and innovative solutions.</span></p>
                         </div>
                     </div>
                 </div>
@@ -953,6 +953,28 @@ font-size: 1.5rem;
 });
     </script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const texts = [
+          "Driving transformation through strategic insights and innovative solutions.",
+          "Igniting Tomorrow’s Success With Today’s Innovation.",
+          "The Catalyst for Turning Aspirations into Achievements.",
+          "Your Trusted Partner in Achieving Sustainable Growth."
+        ];
+        let currentIndex = 0;
+        const textElement = document.getElementById("changing-text");
+  
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % texts.length;
+          textElement.style.opacity = 0;
+          setTimeout(() => {
+            textElement.innerText = texts[currentIndex];
+            textElement.style.opacity = 1;
+          }, 1); // Wait for the fade-out animation to finish
+        }, 4000); // Change every 4 seconds
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
