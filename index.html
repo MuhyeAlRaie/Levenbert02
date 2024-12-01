@@ -232,147 +232,45 @@ font-size: 1.5rem;
 
 .product {
       width: 100%;
-      height: 100vh; /* Full screen height */
+      height: 60vh; /* Full screen height */
       position: relative;
       /* margin-left: 10%; */
       margin-top: 50px;
-}
-.btn-product .btn {
-background-color: #BFCDCD;
-color: #fff;
-}
-.btn-product .btn:hover {
-background-color: #638181;
-color: #fff;
-}
-.btn-product .btn.active {
-  background-color: #638181;
-      /* border-bottom: 3px solid #638181; */
-      font-weight: bold;
-    }
-    .content-section {
-      margin-top: 200px;
-      height: 400px;
-      color: white;
-      text-align: center;
       display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 1.5rem;
-      height: 70vh;
-      background-size: cover;
-      background-position: center;
-    }
-    .swiper-wrapper .swiper-slide video {
-    position: absolute; /* Position the video absolutely */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the entire section */
-    z-index: 0; /* Behind the content */
-}
-.swiper-slide  .fact-overlay {
-    position: absolute; /* Positioning for overlay */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-    z-index: 0; /* Above video */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
+.product .catalyst-logo {
 
-.swiper-wrapper .swiper-slide .container h3{
-  text-align: left;
-  justify-content: center;
-  z-index: 1;
+  width: 300px;
+  
+  
 }
-.swiper-wrapper .swiper-slide .container h2{
-  position: absolute;
-  top:10%;
-  text-align: left;
-  justify-content: center;
-  z-index: 1;
-  border-bottom: #FF9F7C solid 2px;
-  font-size: 2.5rem;
-  width: fit-content; 
-}
-
-
-.swiper-wrapper .swiper-slide .container p {
-font-size: 1.5rem;
-padding-right: 500px;
-z-index: 1;
+.product h3 {
+  color: #fff ;
 
 }
-.swiper-wrapper .swiper-slide .container .btn-learn{
-  position: absolute;
-      bottom:10vh;
-      right: 10vw;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 24px;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      color: #fff;
-      background-color: #FF9F7C;
-      font-size: 1rem;
-}
-.swiper-button-prev,.swiper-button-next::after {
-color: #FF9F7C;
-/* background-color: #33333389; */
 
-}
-.swiper-button-next,.swiper-button-prev::after {
-color: #FF9F7C;
-/* background-color: #33333389; */
-
-}
-/* .swiper-button-prev{
-  height: 60px;
-  width: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.swiper-button-next {
-  height: 60px;
-  width: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-
-} */
-
-.catalyst-logo-btn {
-  width: 100px;
-}
-.catalyst-logo {
-  position: absolute;
-  top: 10%;
-  width: 350px;
-  z-index: 1;
-}
-.btn-product {
-  align-items: center;
-  text-align: center;
-  margin-top: 100px;
-}
-.product .btn {
-
-height: 150px;
-width: 150px;
+.product .col-md-4 {
+width:300px;
+height: 300px;
 border-radius: 50%;
-margin-top: 20px;
+margin-left: 100px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+.product .col-md-4:hover {
+transform: scale(1.1);
+transition: 0.3s ease;
+
+}
+
+
 
 
 
@@ -625,160 +523,43 @@ margin-top: 20px;
   </section><!-- /Services Section -->
 
 
+
+
+
+
+<Section class="product overlay-dots">
+
+  <div class="container content-wrapper">
+    <h2 class="section-title" style="padding: 50px 0 ;"><span style="color: #BFCDCD;">LEVENBERT</span> PRODUCTS</h2>
+
+    <div class="row">
+   <div class="col-md-4" style="background-color: #638181;"><a href="catalyst.html">
+    <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo">
+    </a>
+   </div>
+   <div class="col-md-4" style="background-color: #FF9F7C;"><a href="leadership-program.html">
+    <img src="assets/img/101-logo.png" alt="" class="catalyst-logo">
+  </a>
+   </div>
+   <div class="col-md-4" style="background-color: #BFCDCD;"><a href="public-private-partnership.html">
+    <!-- <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo"> -->
+    <h3>Public-Private Partnership</h3>
+
+  </a>
+   </div>
+
+
+  </div>
+</div>
+</Section>
+
+
    <!-- Call to Action with Background Image -->
 <section class="cta-section text-center text-white d-flex align-items-center" style="background-image: url('./assets/img/Break-home02.jpg'); height: 250px;">
   <div class="container">
       <h2 data-aos="fade-up" class="animated">⁠Delivering Insight, <Span style="color: #FF9F7C;">Driving Excellence</Span>.</h2>
     </div>
 </section>
-
-
-
-<Section class="product overlay-dots">
-<div class="container-fluid ">
-  <div class="row">
-
- 
-  <div class="col-md-2 content-wrapper  btn-product">
-    <!-- Button Group -->
-     <div class="row">
-      <div class="col-12"><button type="button" class="btn  active" data-slides="slides1"><img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo-btn"></button></div>
-      <div class="col-12"><button type="button" class="btn " data-slides="slides2"><img src="assets/img/101-logo.png" alt="" class="catalyst-logo-btn"></button></div>
-      <div class="col-12"><button type="button" class="btn " data-slides="slides3">Private-Public Partnership</button></div>
-  </div>
-</div>
-  <!-- Content Section with Swiper -->
-  <div class="col-10 content-section">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper" id="swiperWrapper">
-        <!-- Slides for Catalyst -->
-        <div class="swiper-slide" data-set="slides1" >
-          <video autoplay muted loop playsinline="true">
-            <source src="assets/video/catalyst.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="fact-overlay"></div> <!-- Overlay for the video -->
-        <div class="container">
-          <div class="row">
-            <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo">
-
-             <h3 style="color: #fff"><span style="font-weight: bolder;color: #67B7B2;font-size: 2rem;">Empowering</span> Ideas to Bridge <span style="font-weight: bolder;color: #67B7B2;font-size: 2rem;">Innovation</span> and Business <span style="font-weight: bolder;color: #67B7B2;font-size: 2rem;">Acceleration</span> to Transform Vision into Reality.</h3>
-
-            <!-- <div class="col-4"> 
-  
-            </div> -->
-
-          </div>
-        </div>
-      </div>
-        <div class="swiper-slide" data-set="slides1" style="background-color: #638181;">
-          <div class="container">
-            <div class="row">
-              <img src="assets/img/Catalyst-logo-white.png" alt="" class="catalyst-logo">
-              <P>Innovation laboratories are essential to generating innovative solutions, solving problems, and developing strategic initiatives. Their implementation varies globally, impacting the quality of outcomes. To support ongoing development, we have created "CATALYST", an advanced methodology for managing innovation labs and workshops, designed using the most effective international practices.</P>
-
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide" data-set="slides1">
-          <video autoplay muted loop playsinline="true">
-            <source src="assets/video/catalyst03.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="fact-overlay"></div> <!-- Overlay for the video -->
-          <div class="container">
-            <div class="row">
-              <img src="assets/img/Catalyst-logo-white.png" alt="" class="catalyst-logo">
-              <P>The "CATALYST" labs are designed to stimulate innovative ideas and drive the creative processes that enhance the effectiveness and efficiency of institutional innovation. By fostering collaboration and strategic thinking, we ensure the generation of impactful solutions that align with and accelerate the achievement of your strategic objectives.</P>
-              <a class="btn-learn" href="https://drive.google.com/file/d/1aAxKSMYnERE6pbDtfQix1OROKBWxLWKK/view?usp=sharing">Learn more</a>
- 
-            </div>
-          </div>
-        </div>
-        <!-- Slides for Leadership -->
-        <div class="swiper-slide " data-set="slides2" style="background-image: url('assets/img/Leadership-slide1.png')">
-          <div class="fact-overlay"></div> <!-- Overlay for the video -->
-
-          <div class="container ">
-            <div class="row">
-              <h2>Leadership Development Program</h2> 
-              <h3 style="color: #fff">Shaping Leaders Who <span style="color: #FF9F7C;">Influence</span>, <span style="color: #FF9F7C;">Empower</span>, and <span style="color: #FF9F7C;">Transform</span> the Future.</h3>
-
-
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide" data-set="slides2" style="background-image: url('assets/img/Leadership-slide2.png'); display: none;">
-          <div class="fact-overlay"></div> <!-- Overlay for the video -->
-
-          <div class="container">
-            <div class="row">
-              <h2>Shaping Tomorrow’s Leaders</h2> 
-              <p> Leadership programs are crucial for developing talent, enhancing essential skills, and driving sustainable growth. They empower individuals to tackle challenges, inspire teams, and make strategic decisions that elevate organizational capabilities. These programs are designed to cultivate effective leaders through proven methodologies and innovative learning experiences, ensuring they are equipped to lead with vision, influence, and impact in an ever-changing business landscape.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide" data-set="slides2" style="background-image: url('assets/img/Leadership-slide3.png'); display: none;">
-
-          <div class="container">
-            <div class="row">
-              
-              <img src="assets/img/101-logo.png" alt="" class="catalyst-logo">
-
-              <p style="color: #333;">Our 101 Leadership Assessment Methodology focuses on developing leadership by measuring and enhancing key competencies. It helps administrative leaders align their
-                leadership orientation with effective performance through a global development perspective and its impact on the local environment. The methodology establishes a leadership
-                 framework based on key administrative skills, knowledge, and behavioral insights, using global experiences to assess leadership performance in terms of self, behavior, and knowledge.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slides for Innovation -->
-        <div class="swiper-slide" data-set="slides3" style="background-image: url('assets/img/ppp-slide1.png'); display: none;">
-          <div class="fact-overlay"></div> <!-- Overlay for the video -->
-
-          <div class="container">
-            <div class="row">
-              <h2> Private-Public Partnership Program</h2> 
-              <h3 style="color: #fff"> Uniting Sectors to <span style="color: #FF9F7C;">Ignite</span> Innovation,<span style="color: #FF9F7C;">Power</span> Progress, and <span style="color: #FF9F7C;">Inspire </span> Development.</h3>
-                 
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide" data-set="slides3" style="background-image: url('assets/img/ppp-slide2.png'); display: none;">
-          
-          <div class="fact-overlay"></div> <!-- Overlay for the video -->
-          <div class="container">
-            <div class="row">
-              <h2>Bridging Sectors</h2> 
-              <p> Private-Public Partnership (PPP) programs leverage the combined strengths, resources, and expertise of both sectors to tackle complex challenges and drive sustainable growth. By aligning public goals with private sector innovation, these partnerships facilitate the development of impactful solutions that accelerate progress, improve services, and deliver long-term value to communities and stakeholders.</p>
-
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide" data-set="slides3" style="background-image: url('assets/img/ppp-slide3.png'); display: none;">
-          <div class="fact-overlay"></div> <!-- Overlay for the video -->
-
-          <div class="container">
-            <div class="row">
-              <h2>Delivering Beneficial Impact</h2> 
-              <p> At our core, we deliver tailored programs and solutions that bridge the gap between public objectives and private-sector innovation, maximizing effectiveness and efficiency. Through strategic planning, integrated frameworks, and results-driven strategies, we foster collaboration and empower stakeholders to achieve sustainable growth and measurable impact. Our agile, adaptive approach ensures lasting synergy between both sectors.</p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Pagination -->
-      <!-- <div class="swiper-pagination"></div> -->
-      <!-- Navigation Buttons -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
- </div>
-</div>
-</Section>
-
-
-
 
 
 <!-- Section 03: Latest News -->
@@ -1091,45 +872,7 @@ margin-top: 20px;
   });
 </script>
 
-<script>
-  // Initialize Swiper
-  const swiper = new Swiper('.mySwiper', {
-    loop: true,
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  // Button Click Handling
-  document.querySelectorAll('.btn-product  .btn').forEach(button => {
-    button.addEventListener('click', function () {
-      // Remove active class from all buttons
-      document.querySelectorAll('.btn-product  .btn').forEach(btn => btn.classList.remove('active'));
-
-      // Add active class to the clicked button
-      this.classList.add('active');
-
-      // Filter slides based on the button clicked
-      const selectedSet = this.getAttribute('data-slides');
-      document.querySelectorAll('.swiper-slide').forEach(slide => {
-        if (slide.getAttribute('data-set') === selectedSet) {
-          slide.style.display = 'flex';
-        } else {
-          slide.style.display = 'none';
-        }
-      });
-
-      // Update Swiper
-      swiper.update();
-    });
-  });
-</script>
 
 
 
