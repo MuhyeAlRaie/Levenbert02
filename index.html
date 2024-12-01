@@ -232,7 +232,6 @@ font-size: 1.5rem;
 
 .product {
       width: 100%;
-      height: 60vh; /* Full screen height */
       position: relative;
       /* margin-left: 10%; */
       margin-top: 50px;
@@ -245,7 +244,7 @@ font-size: 1.5rem;
 
 .product .catalyst-logo {
 
-  width: 300px;
+  width: 250px;
   
   
 }
@@ -268,6 +267,16 @@ display: flex;
 transform: scale(1.1);
 transition: 0.3s ease;
 
+}
+@media (max-width:768px) {
+
+  
+.product .col-md-4 {
+
+  margin-left: 50px;
+  margin-top: 10px;
+}
+  
 }
 
 
@@ -533,8 +542,8 @@ transition: 0.3s ease;
     <h2 class="section-title" style="padding: 50px 0 ;"><span style="color: #BFCDCD;">LEVENBERT</span> PRODUCTS</h2>
 
     <div class="row">
-   <div class="col-md-4" style="background-color: #638181;"><a href="catalyst.html">
-    <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo">
+   <div class="col-md-4" style="background-color: #66b5b2;"><a href="catalyst.html">
+    <img src="assets/img/Catalyst-logo-white.png" alt="" class="catalyst-logo">
     </a>
    </div>
    <div class="col-md-4" style="background-color: #FF9F7C;"><a href="leadership-program.html">

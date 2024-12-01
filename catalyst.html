@@ -96,7 +96,11 @@ color: #638181;
     }
    
     .c-1 {
-      align-items: center;
+    
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     }
     @media (max-width:768px){
       .c-1 {
@@ -118,6 +122,55 @@ color: #638181;
         width: 330px;
       }
     }
+
+    .product {
+      width: 100%;
+      position: relative;
+      /* margin-left: 10%; */
+      margin-top: 50px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product .catalyst-logo {
+
+  width: 250px;
+  
+  
+}
+.product h3 {
+  color: #fff ;
+
+}
+
+.product .col-md-4 {
+width:300px;
+height: 300px;
+border-radius: 50%;
+margin-left: 100px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.product .col-md-4:hover {
+transform: scale(1.1);
+transition: 0.3s ease;
+
+}
+@media (max-width:768px) {
+
+  
+.product .col-md-4 {
+
+  margin-left: 50px;
+  margin-top: 10px;
+}
+  
+}
 
     </style>
 </head>
@@ -209,7 +262,7 @@ color: #638181;
 
         <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200" style="background-color: #fff;">
           <img src="assets/img/Catalyst-logo.png" alt="" class="img-fluid services-img">
-          <h3 style="color: #2D435B;"><span class="icon bi-circle-fill" style="color: #FF9F7C;font-size: 1rem;"></span> CATALYST</h3>
+          <h3 style="color: #2D435B;">Introduction</h3>
           <p style="font-size: 16px;padding-left: 20px;">
             Innovation laboratories are an important way to develop 
             and generate ideas to come up with innovative solutions 
@@ -217,7 +270,7 @@ color: #638181;
             initiatives. The ways and means of implementing 
             laboratories vary globally. This difference is reflected in 
             the quantity and quality of results achieved at the end 
-            of these laboratories. to support and cope with continues 
+            of these laboratories. To support and cope with continues 
             development – internally at the company and externally 
             with our partners - we have developed an advance 
             methodology for innovation laboratory and workshops 
@@ -232,7 +285,7 @@ color: #638181;
           </p>
           <img src="assets/img/c-1.png" alt="c-1" class="c-1" >
 
-          <h3 style="color: #2D435B;">Objective</h3>
+          <h3 style="color: #2D435B;">Objectives</h3>
           <P style="font-size: 16px;padding-left: 20px;"> The " CATALYST" labs aim 
             to achieve effectiveness 
             and efficiency in the 
@@ -273,6 +326,32 @@ color: #638181;
 
       </div>
 
+
+      <Section class="product overlay-dots">
+
+        <div class="container content-wrapper">
+          <h2 class="section-title" style="padding: 50px 0 ;">OTHER PRODUCTS</h2>
+      
+          <div class="row d-flex align-items-center">
+         <!-- <div class="col-md-4" style="background-color: #638181;"><a href="catalyst.html">
+          <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo">
+          </a>
+         </div> -->
+         <div class="col-md-4" style="background-color: #FF9F7C;"><a href="leadership-program.html">
+          <img src="assets/img/101-logo.png" alt="" class="catalyst-logo">
+        </a>
+         </div>
+         <div class="col-md-4" style="background-color: #BFCDCD;"><a href="public-private-partnership.html">
+          <!-- <img src="assets/img/Catalyst-logo.png" alt="" class="catalyst-logo"> -->
+          <h3>Public-Private Partnership</h3>
+      
+        </a>
+         </div>
+      
+      
+        </div>
+      </div>
+      </Section>
     </section><!-- /Service Details Section -->
 
     </main>
