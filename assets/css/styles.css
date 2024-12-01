@@ -365,7 +365,8 @@ footer .text-center p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    /* background: rgba(0, 0, 0, 0.6); */
+     /* Dark overlay for readability */
     color: #fff;
     text-align: center;
 }
